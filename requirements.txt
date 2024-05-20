@@ -1,3 +1,8 @@
 praw
 tqdm
 datetime
+deep_translator
+nltk
+pandas
+numpy
+pathlib
