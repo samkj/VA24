@@ -73,5 +73,5 @@ def get_reddit_data(subreddits, keywords, limit, csv_file_path, start_date, end_
 #all subreddits
 #get_reddit_data(["Austria", "europe", "Stmk", "wien", "Tirol", "Salzburg", "Vorarlberg", "kaernten", "burgenland", "Noesterreich", "Linz"], ["ÖVP", "SPÖ", "FPÖ", "Grüne", "Neos"], 100, "C:/Stefan/Uni Graz/Master/VU Visual Analytics/austria_politik_posts2.csv", "2019-09-29", "2024-04-29")
 
-get_reddit_data(["Linz"], ["ÖVP", "SPÖ", "FPÖ", "Grüne", "Neos"], None, "C:/Stefan/Uni Graz/Master/VU Visual Analytics/Linz_politik_posts.csv", "2019-09-29", "2024-04-29")
+get_reddit_data(["Linz"], ["ÖVP", "SPÖ", "FPÖ", "Grüne", "Neos"], None, "subreddits_datafiles\Linz_politik_posts.csv", "2019-09-29", "2024-04-29")
 
