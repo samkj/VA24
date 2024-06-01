@@ -48,4 +48,4 @@ def analyze_sentiments(input_csv, output_csv, model_name="cardiffnlp/twitter-rob
 
 
 # Example usage:
-analyze_sentiments(input_csv='C:/Stefan/Uni Graz/Master/VU Visual Analytics/Group Project/subreddits_datafiles_english/cleaned_data1.csv', output_csv='C:/Stefan/Uni Graz/Master/VU Visual Analytics/Group Project/subreddits_datafiles_english/sentiment_all_subreddits_data.csv')
+analyze_sentiments(input_csv='../subreddits_datafiles\processed_datafiles\cleaned_data1.csv', output_csv='../out\sentiment_all_subreddits_data.csv')
