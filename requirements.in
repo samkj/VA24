@@ -1,0 +1,17 @@
+praw
+tqdm
+datetime
+deep_translator
+nltk
+pandas
+numpy
+pathlib
+transformers
+dash
+dash_core_components
+dash_html_components
+dash_bootstrap_components
+dash_table
+dash_daq
+plotly
+geopandas
