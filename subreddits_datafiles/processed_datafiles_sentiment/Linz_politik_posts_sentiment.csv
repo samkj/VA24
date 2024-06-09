@@ -1,0 +1,28 @@
+author_name,post_id,title,body,post_date,keyword,comment_author_name,comment_id,comment_parent_id,comment_body,comment_score,comment_created_utc,comment_replies_count,comment_keyword,subreddit,BERT_class,BERT_Compound,BERT_label,Positive_Prob,Neutral_Prob,Negative_Prob,Max_Prob_Class
+Quamboq,19adlg9,Nibelungenbrücke: Mehr Platz für Radler ab Herbst,,2024-01-19 07:31:50,ÖVP,kraut_und_ruabn,kir0xh5,t3_19adlg9,"Der Hajart scheint zur Abwechslung mal einer zu sein, der sein Ressort einigermaßen ernst nimmt, und nicht bloß als Sprungbrett für höhere Parteiweihen. Schade, daß er in der ÖVP daheim ist.",2,2024-01-20 15:42:49,0,ÖVP,Linz,NEUTRAL,0.5,1.5,"['positive', 0.0007534240139648318]","['negative', 0.0022482983767986298]","['neutral', 0.9969983100891113]",neutral
+Quamboq,1765z5v,"Meinungen zum ""Mehrzweckstreifen""?",Aus der Bezirksrundschau.,2023-10-12 12:37:10,ÖVP,smoothvibe,k4k5jfn,t1_k4jzegk,Der Verkehrsstadtrat ist ÖVPler. Sollte als Antwort reichen.,6,2023-10-12 13:31:48,1,ÖVP,Linz,NEUTRAL,0.5,1.5,"['positive', 5.880122262169607e-05]","['negative', 0.00018877106776926666]","['neutral', 0.9997524619102478]",neutral
+MountainEmperor,1bd1z0z,Linzer Aktivpass: FPÖ will Kürzungen für Migranten,,2024-03-12 16:47:27,FPÖ,Savings_Aioli_2981,kujr5qa,t3_1bd1z0z,"Am liebsten wär’s der FPÖ, wenn sie alle Migranten wo einpferchen könnten. Am besten natürlich an einem Ort, wo sonst niemand hinkommt - ist in Österreich halt schwierig, deshalb auch der Vorschlag mit der Remigration.",10,2024-03-12 17:19:05,2,FPÖ,Linz,NEUTRAL,0.5,1.5,"['positive', 0.06994093209505081]","['negative', 0.33738836646080017]","['neutral', 0.592670738697052]",neutral
+GrafChris,t5osrb,Wohnen Grüne Mitte,"Hi, gibts hier jemanden der in der Grünen Mitte wohnt und mir ein bisschen davon erzählen könnte?
+
+Meine Freundin und ich haben vor dass wir in nächster Zeit nach Linz ziehen und hätt dort eine Wohnung besichtigt, deshalb wollte ich mich mal nach Erfahrungen erkundigen :)",2022-03-03 10:41:35,Grüne,El_Grobo,hz646pv,t3_t5osrb,"Ein grundsätzlich nettes neues Viertel. Die Wohnung die wir besichtigt haben war TOP. Auch Preis war super.
+
+Wir wollten vor 2 Jahren auch dort hin. Wir haben uns eines Sommertags in die Grüne mitte gesetzt und das auf uns wirken lassen.... Und haben beschlossen, dass das zu viel Trubel ist. Kindergeschrei, Fussballspiele, laute Musik, sehr viel Leben auf kleinem Platz. Multikulti, was seinen Reiz haben kann, aber auch anstrengend ist auf dauer.
+
+
+So hat es uns sehr gut gefallen! Nur wir haben was für ruhigere Zeiten gesucht.... ;)
+
+Anbindung mit öffis is soweit ich mich erinnere  ausbaufähig.
+
+Lenaupark: viele Einkaufsmöglichkeiten. Aber auch sehr diverses Publikum. 
+
+Wenn ich mehr Stadtmensch wär, hätte ich die Wohnung dort genommen. Bin ich aber nicht!",2,2022-03-03 11:11:09,1,Grüne,Linz,POSITIVE,1.0,2.0,"['positive', 0.997137188911438]","['negative', 0.00283824373036623]","['neutral', 2.463786040607374e-05]",positive
+GrafChris,t5osrb,Wohnen Grüne Mitte,"Hi, gibts hier jemanden der in der Grünen Mitte wohnt und mir ein bisschen davon erzählen könnte?
+
+Meine Freundin und ich haben vor dass wir in nächster Zeit nach Linz ziehen und hätt dort eine Wohnung besichtigt, deshalb wollte ich mich mal nach Erfahrungen erkundigen :)",2022-03-03 10:41:35,Grüne,Alchybigboy3733,hzp0275,t3_t5osrb,"Hallo ich kann auch meine 2cents dazu geben, da ich vor genau einem Jahr mit meiner Freundin in die Grüne Mitte gezogen bin (GWG) und bin eigentlich sehr zufrieden. Man hat eigentlich alles in der Nähe was man braucht (Supermärkte, Restaurants, Fitnessstudio, Apotheke) und auch wie der Name schon sagt ist es angenehm grün. Ich bin ein bisschen voreingenommen da wir davor in einer sehr kleinen Wiener Innenstadtwohung gewohnt haben und nun für das selbe Geld eine doppelt so große Wohnung mit großer Terrasse und Garagenplatz in einer guten Lage bekommen haben. Was man aber auf jeden Fall dazu sagen muss ist, dass es viele Kinder und viele Familien und viele Hundebesitzer gibt. Dh es gibt öfter mal ziemlichen Dreck, hauptsächlich Kinder bzw Teenies die einfach alles am Boden werden anstatt in Mülleimer zu werfen aber manchmal auch faule Hundebesitzer die den Hundekot nicht wegräumen.
+
+Wenn man keine Kinder mag (dies soll keine Wertung sein) sollte man die Grüne Mitte wohl meiden.",1,2022-03-07 12:01:34,1,Grüne,Linz,POSITIVE,1.0,2.0,"['positive', 0.9952168464660645]","['negative', 0.004686447326093912]","['neutral', 9.668000711826608e-05]",positive
+GrafChris,t5osrb,Wohnen Grüne Mitte,"Hi, gibts hier jemanden der in der Grünen Mitte wohnt und mir ein bisschen davon erzählen könnte?
+
+Meine Freundin und ich haben vor dass wir in nächster Zeit nach Linz ziehen und hätt dort eine Wohnung besichtigt, deshalb wollte ich mich mal nach Erfahrungen erkundigen :)",2022-03-03 10:41:35,Grüne,GrafChris,hz6rrnp,t1_hz6rcqi,"Genau, da sind wir seit der letzten Woche schon bei den meisten dabei! :) Aber danke für den Hinweis.
+
+Uns hat der derzeitge Mieter der Grünen Mitte Wohnung halt gesteckt wie das abläuft bei den Genossenschaften, dass halt die die schon am längsten dabei sind eher den vorzug bekommen",2,2022-03-03 14:46:32,0,Grüne,Linz,POSITIVE,1.0,2.0,"['positive', 0.8689672946929932]","['negative', 0.0683479756116867]","['neutral', 0.06268467009067535]",positive
