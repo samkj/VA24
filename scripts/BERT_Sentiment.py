@@ -2,7 +2,7 @@ from transformers import pipeline
 import pandas as pd
 from tqdm import tqdm
 
-def analyze_sentiments(input_csv, output_csv, model_name="cardiffnlp/twitter-roberta-base-sentiment-latest", max_token_length=512):
+def analyze_sentiments(input_csv, output_csv, model_name="ssary/XLM-RoBERTa-German-sentiment", max_token_length=512):
     sentiment_pipeline = pipeline(model=model_name)
     
     Reddit_data = pd.read_csv(input_csv)
@@ -11,8 +11,8 @@ def analyze_sentiments(input_csv, output_csv, model_name="cardiffnlp/twitter-rob
     Reddit_data['BERT_Compound'] = 0.0
     Reddit_data['BERT_label'] = 0.0
 
-    for i in tqdm(range(len(Reddit_data['cleaned_comment_body'])), desc="Processing Sentiments"):
-        comment = Reddit_data['cleaned_comment_body'][i][:max_token_length] 
+    for i in tqdm(range(len(Reddit_data['comment_body'])), desc="Processing Sentiments"):
+        comment = Reddit_data['comment_body'][i][:max_token_length] 
         sentiment_dict = sentiment_pipeline(comment)
         Reddit_data['BERT_class'][i] = sentiment_dict[0]['label'].upper()
         Reddit_data['BERT_Compound'][i] = sentiment_dict[0]['score']
@@ -38,4 +38,6 @@ def analyze_sentiments(input_csv, output_csv, model_name="cardiffnlp/twitter-rob
     print("Mean Sentiments:")
     print(mean_sentiments)
 
-analyze_sentiments(input_csv=r"C:\Stefan\Uni Graz\Master\VU Visual Analytics\Group Project\processed_datafiles\cleaned_data1.csv", output_csv=r"C:\Stefan\Uni Graz\Master\VU Visual Analytics\Group Project\processed_datafiles_sentiment\sentiment_all_subreddits_data.csv")
+analyze_sentiments(input_csv=r"C:\Stefan\Uni Graz\Master\VU Visual Analytics\Group Project\subreddits_datafiles\austria_politik_all_posts.csv",
+                    output_csv=r"C:\Stefan\Uni Graz\Master\VU Visual Analytics\Group Project\processed_datafiles_sentiment\austria_politik_all_posts_sentiment.csv")
+
