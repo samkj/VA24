@@ -1,14 +1,19 @@
-author_name,post_id,title,body,post_date,keyword,comment_author_name,comment_id,comment_parent_id,comment_body,comment_score,comment_created_utc,comment_replies_count,comment_keyword,subreddit,BERT_class,BERT_Compound,BERT_label,Positive_Prob,Neutral_Prob,Negative_Prob,Max_Prob_Class
-kaisermax6020,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,Apycia,jxskt6u,t3_1614lny,"Also erstens: sollte der vorbereitete ÖVPsplitter passieren - wovon ich stark ausgehe - kommt der Lassenberger fix in die Stichwahl und wird dort verlieren, egal gegen wen.
+author_name,post_id,title,body,post_date,keyword,comment_author_name,comment_id,comment_parent_id,comment_body,comment_score,comment_created_utc,comment_replies_count,comment_keyword,subreddit,state,cleaned_body,cleaned_comment_body,BERT_class,BERT_Compound,BERT_label
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,Apycia,jxskt6u,t3_1614lny,"Also erstens: sollte der vorbereitete ÖVPsplitter passieren - wovon ich stark ausgehe - kommt der Lassenberger fix in die Stichwahl und wird dort verlieren, egal gegen wen.
 
 die Frage ist nur mehr, gegen wen er Antritt.
 
 Und hier wird die große Grüne Basis spannend: Bleiben sie treu? geschlossen zur SPÖ? oder Vollaufsplitterung inkl. ALI, LI, KPÖ?
 
-Ich sehe bei der Ausgangslage verdammt gute Karten für die/den Liste Innsbruck Kandidat/in, (solang es nicht O-P ist), evtl. der Lukas Krackl?",5,2023-08-26 05:08:34,0,ÖVP,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.030087128281593323]","['negative', 0.20001786947250366]","['neutral', 0.7698950171470642]",neutral
-kaisermax6020,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,MobofDucks,jxqidtb,t3_1614lny,Auch wenn ich kein Fan bin geh ich von aus das övp als Gewinner herausgeht.,2,2023-08-25 19:36:57,0,ÖVP,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.0028045340441167355]","['negative', 0.011915291659533978]","['neutral', 0.9852801561355591]",neutral
-kaisermax6020,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,Either_Chicken_161,jxqzzqx,t1_jxpzibi,i denk mal von gewissen teilen dieser partei is es tatsächlich gewollt nicht zu arbeiterfreundliche oder sozialverträgliche politik zu machen da der dornauer ja eigentlich einer övp viel näher steht als echter sozialdemokratie,1,2023-08-25 21:27:59,0,ÖVP,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.022700944915413857]","['negative', 0.39143648743629456]","['neutral', 0.5858625769615173]",neutral
-ygoldberg,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
+Ich sehe bei der Ausgangslage verdammt gute Karten für die/den Liste Innsbruck Kandidat/in, (solang es nicht O-P ist), evtl. der Lukas Krackl?",5,2023-08-26 05:08:34,0,ÖVP,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,erstens vorbereitete VPsplitter passieren wovon stark ausgehe kommt Lassenberger fix Stichwahl verlieren egal wen Frage mehr wen Antritt groe Grne Basis spannend Bleiben treu geschlossen SP Vollaufsplitterung inkl ALI LI KP sehe Ausgangslage verdammt gute Karten fr dieden Liste Innsbruck Kandidatin solang OP evtl Lukas Krackl,NEUTRAL,0.6393768191337585,1.3606231808662415
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,smittyhank_jmj28,jxpy2pv,t3_1614lny,Ist echt schwer zu sagen diesmal. Ich denke ja dass sich die övp's doch irgendwie einigen und dann bm stellen... good night ibk,3,2023-08-25 17:29:17,1,ÖVP,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,echt schwer sagen diesmal denke ja vps irgendwie bm stellen good night ibk,NEGATIVE,0.6927114725112915,0.3072885274887085
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,Hefty-Pie-4084,jxq2lks,t3_1614lny,"Verkomplizierend, dass Vizebürgermeister Anzengruber sich von der ÖVP abspalten könnte - ob es beim den derzeitigen Umfragewerten der Bundes- ÖVP ratsam ist, aus Wien Tursky nach Innsbruck zu schicken, kann ich nicht ganz nachvollziehen. Vielleicht hofft Oppitz-Plörr, Tursky hat von Ihren Aktionen als Bürgermeisterin nichts mit bekommen und hält Ihr einen Posten frei? 🤷‍♂️",2,2023-08-25 17:57:20,1,ÖVP,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,Verkomplizierend Vizebrgermeister Anzengruber VP abspalten knnte beim derzeitigen Umfragewerten Bundes VP ratsam Wien Tursky Innsbruck schicken ganz nachvollziehen Vielleicht hofft OppitzPlrr Tursky Aktionen Brgermeisterin bekommen hlt Posten frei,NEUTRAL,0.9076793193817139,1.0923206806182861
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,MobofDucks,jxqidtb,t3_1614lny,Auch wenn ich kein Fan bin geh ich von aus das övp als Gewinner herausgeht.,2,2023-08-25 19:36:57,0,ÖVP,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,Fan geh vp Gewinner herausgeht,NEUTRAL,0.97899329662323,1.02100670337677
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,jowoReiter,jxv7eet,t3_1614lny,"Kommt meiner Meinung stark drauf an, wie sich die ÖVP/FI Geschichte entwickelt und ob/wann Tursky in der Stadtpartei landet. 
+Wenn der genug Zeit zum Werken hat und ein ÖVP/FI packt (+ NEOS ?) zustande kommt, seh ich gute Karten für Tursky. 
+Nach der Performance vom Willi inkl. Skandale und Skandälchen kann ich mir nur echt schwer vorstellen, dass der nochmal gewählt wird. Andererseits ist's halt immer noch IBK, da hat das Wahlvolk schon einen Hang zur Selbstgeiselung.",2,2023-08-26 19:24:19,0,ÖVP,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,Kommt Meinung stark drauf VPFI Geschichte entwickelt obwann Tursky Stadtpartei landet genug Zeit Werken VPFI packt NEOS zustande kommt seh gute Karten fr Tursky Performance Willi inkl Skandale Skandlchen echt schwer vorstellen nochmal gewhlt Andererseits ists halt immer IBK Wahlvolk schon Hang Selbstgeiselung,POSITIVE,0.47470173239707947,2.5252982676029205
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,ÖVP,Either_Chicken_161,jxqzzqx,t1_jxpzibi,i denk mal von gewissen teilen dieser partei is es tatsächlich gewollt nicht zu arbeiterfreundliche oder sozialverträgliche politik zu machen da der dornauer ja eigentlich einer övp viel näher steht als echter sozialdemokratie,1,2023-08-25 21:27:59,0,ÖVP,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,i denk mal gewissen teilen partei is tatschlich gewollt arbeiterfreundliche sozialvertrgliche politik dornauer ja eigentlich vp nher steht echter sozialdemokratie,NEGATIVE,0.858365535736084,0.14163446426391602
+soreOcelot4,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
 
 |Liste|Wahlkampfkosten|Stimmen - Mandate - Prozent|Ausgaben/Stimme|Ausgaben/Mandat|
 |:-|:-|:-|:-|:-|
@@ -33,42 +38,165 @@ Honorable Mentions (4% Hürde nicht erreicht):
 |EINIG Innsbruck|40.000€|406    - 0,68%|98,52€|
 |TUN|3.000€|204    - 0,34%|14,71€|
 
-Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,ÖVP,ygoldberg,kzvxzut,t3_1c5qulz,"Da braucht mir niemand mehr erzählen, dass Kommunisten nicht wirtschaften können und die ÖVP die Wirtschaftspartei ist :)",50,2024-04-16 20:47:18,1,ÖVP,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.0380517952144146]","['negative', 0.36398401856422424]","['neutral', 0.5979642271995544]",neutral
-Good_Inflation_3072,144e9tt,Neumitglieder SPÖ?,Gibt es in Innsbruck eigentlich neue SPÖler? Dann bitte DM! :),2023-06-08 16:44:00,SPÖ,LEOcIShere,jnztyxo,t1_jnfjfb6,"Diese Antwort beweist, dass du bei der SPÖ richtig aufgehoben bist.",1,2023-06-13 14:08:26,1,SPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.0011633445974439383]","['negative', 0.003936959430575371]","['neutral', 0.9948996901512146]",neutral
-Good_Inflation_3072,144e9tt,Neumitglieder SPÖ?,Gibt es in Innsbruck eigentlich neue SPÖler? Dann bitte DM! :),2023-06-08 16:44:00,SPÖ,No author,jngek0d,t1_jng1r9b,bei der spö tirol ist das ein hoffnungsloses Unterfangen.,1,2023-06-08 22:13:10,1,SPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 7.972413732204586e-05]","['negative', 0.00023493288608733565]","['neutral', 0.9996854066848755]",neutral
-kaisermax6020,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,SPÖ,Apycia,jxskt6u,t3_1614lny,"Also erstens: sollte der vorbereitete ÖVPsplitter passieren - wovon ich stark ausgehe - kommt der Lassenberger fix in die Stichwahl und wird dort verlieren, egal gegen wen.
+Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,ÖVP,ygoldberg,kzvxzut,t3_1c5qulz,"Da braucht mir niemand mehr erzählen, dass Kommunisten nicht wirtschaften können und die ÖVP die Wirtschaftspartei ist :)",50,2024-04-16 20:47:18,1,ÖVP,Innsbruck,Tirol,xB ListeWahlkampfkostenStimmen Mandate ProzentAusgabenStimmeAusgabenMandat TurskyVP Liste Fritz Grne SP FP JA Anzengruber Alternative Liste KP xB Honorable Mentions Hrde erreicht ListeWahlkampfkostenStimmen ProzentAusgabenStimme NEOS Gerechtes Innsbruck Unabhngigen Innsbruck TUN Quelle gerechnet Rechenfehler ausgebessert httpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungenahttpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungena,braucht niemand mehr erzhlen Kommunisten wirtschaften knnen VP Wirtschaftspartei,NEGATIVE,0.4953833222389221,0.5046166777610779
+soreOcelot4,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
+
+|Liste|Wahlkampfkosten|Stimmen - Mandate - Prozent|Ausgaben/Stimme|Ausgaben/Mandat|
+|:-|:-|:-|:-|:-|
+|Tursky/ÖVP|690.000€|6.073  -  4 - 10,15%|113,62€| 172.000€|
+|Liste Fritz|200.000€|3.291  -  2 - 5,50%|60,77€| 100.000€ |
+|Grüne|450.000€|11.286 - 8 - 18,87%|39,87€| 56.250€|
+|SPÖ|280.000€|8.122  -  6 - 13,58%|34,47€| 46.667€|
+|FPÖ|300.000€|9.096  -  7 - 15,21%|32,98€| 42.857€ |
+|JA - Anzengruber|250.000€|10.067 - 8 - 16,83%|24,83€| 31.250€|
+|Alternative Liste|37.000€|2.889  -  2 - 4,83%|12,81€| 18.500€ |
+|KPÖ|20.000€|4.020  -  3 - 6,72%|4,98€| 6.667€ |
+
+&#x200B;
+
+Honorable Mentions (4% Hürde nicht erreicht):
+
+|Liste|Wahlkampfkosten|Stimmen - Prozent|Ausgaben/Stimme|
+|:-|:-|:-|:-|
+|NEOS|47.500€|2.102 - 3,51%|22,60€|
+|Gerechtes Innsbruck|15.000€|2.081 - 3,48%|7,21€|
+|DU - Die Unabhängigen|20.000€|177    - 0,30%|112,99€|
+|EINIG Innsbruck|40.000€|406    - 0,68%|98,52€|
+|TUN|3.000€|204    - 0,34%|14,71€|
+
+Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,ÖVP,FeatheryRobin,kzwzgej,t1_kzwr8nw,"Die KPÖ hatte vergleichsweise recht wenige Aufsteller. Ja, an gewissen Orten forciert, wo sie auch die Wähler vermuteten. Sie hatten auch nur bescheidene Papp-Banner, primär um Bäume herum.
+
+Die FPÖ hat die ganzen Autobahnauffahrten, Bundesstraßen und Hauptverkehrsstraßen vom Berufsverkehr in und um Innsbruck zugekleistert. Frecherweise wurden dann zum Wahltag auch noch (zumindest um meinem Sprengel) KPÖ Plakate runtergerissen und mit FPÖ, SPÖ und ÖVP Plakaten überklebt.",7,2024-04-17 00:35:27,0,ÖVP,Innsbruck,Tirol,xB ListeWahlkampfkostenStimmen Mandate ProzentAusgabenStimmeAusgabenMandat TurskyVP Liste Fritz Grne SP FP JA Anzengruber Alternative Liste KP xB Honorable Mentions Hrde erreicht ListeWahlkampfkostenStimmen ProzentAusgabenStimme NEOS Gerechtes Innsbruck Unabhngigen Innsbruck TUN Quelle gerechnet Rechenfehler ausgebessert httpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungenahttpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungena,KP vergleichsweise recht wenige Aufsteller Ja gewissen Orten forciert Whler vermuteten bescheidene PappBanner primr Bume herum FP ganzen Autobahnauffahrten Bundesstraen Hauptverkehrsstraen Berufsverkehr Innsbruck zugekleistert Frecherweise wurden Wahltag zumindest Sprengel KP Plakate runtergerissen FP SP VP Plakaten berklebt,NEUTRAL,0.6411485075950623,1.3588514924049377
+panickyKitten5,144e9tt,Neumitglieder SPÖ?,Gibt es in Innsbruck eigentlich neue SPÖler? Dann bitte DM! :),2023-06-08 16:44:00,SPÖ,No author,jnfxx89,t1_jnf5s3x,"lol. gibts da keine events oder so? und wieso erwähnst das nicht in deinem anfangs post? 
+
+aber was erwartet man sich von einem spöler..",2,2023-06-08 20:28:55,1,SPÖ,Innsbruck,Tirol,Gibt Innsbruck eigentlich neue SPler bitte DM,lol gibts events wieso erwhnst anfangs post erwartet spler,NEGATIVE,0.7010708451271057,0.2989291548728943
+panickyKitten5,144e9tt,Neumitglieder SPÖ?,Gibt es in Innsbruck eigentlich neue SPÖler? Dann bitte DM! :),2023-06-08 16:44:00,SPÖ,No author,jnfgr1g,t1_jnf5s3x,Warum macht man sowas? ich mein spö...,2,2023-06-08 18:41:07,1,SPÖ,Innsbruck,Tirol,Gibt Innsbruck eigentlich neue SPler bitte DM,Warum macht sowas sp,NEGATIVE,0.9140802621841431,0.08591973781585693
+panickyKitten5,144e9tt,Neumitglieder SPÖ?,Gibt es in Innsbruck eigentlich neue SPÖler? Dann bitte DM! :),2023-06-08 16:44:00,SPÖ,Good_Inflation_3072,jnfjfb6,t1_jnfgr1g,Warum man 'SPÖ macht'?,0,2023-06-08 18:57:49,2,SPÖ,Innsbruck,Tirol,Gibt Innsbruck eigentlich neue SPler bitte DM,Warum SP macht,NEUTRAL,0.7353836297988892,1.2646163702011108
+panickyKitten5,144e9tt,Neumitglieder SPÖ?,Gibt es in Innsbruck eigentlich neue SPÖler? Dann bitte DM! :),2023-06-08 16:44:00,SPÖ,LEOcIShere,jnztyxo,t1_jnfjfb6,"Diese Antwort beweist, dass du bei der SPÖ richtig aufgehoben bist.",1,2023-06-13 14:08:26,1,SPÖ,Innsbruck,Tirol,Gibt Innsbruck eigentlich neue SPler bitte DM,Antwort beweist SP richtig aufgehoben,NEUTRAL,0.9969969987869263,1.0030030012130737
+panickyKitten5,144e9tt,Neumitglieder SPÖ?,Gibt es in Innsbruck eigentlich neue SPÖler? Dann bitte DM! :),2023-06-08 16:44:00,SPÖ,No author,jngek0d,t1_jng1r9b,bei der spö tirol ist das ein hoffnungsloses Unterfangen.,1,2023-06-08 22:13:10,1,SPÖ,Innsbruck,Tirol,Gibt Innsbruck eigentlich neue SPler bitte DM,sp tirol hoffnungsloses Unterfangen,NEUTRAL,0.9987555742263794,1.0012444257736206
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,SPÖ,Apycia,jxskt6u,t3_1614lny,"Also erstens: sollte der vorbereitete ÖVPsplitter passieren - wovon ich stark ausgehe - kommt der Lassenberger fix in die Stichwahl und wird dort verlieren, egal gegen wen.
 
 die Frage ist nur mehr, gegen wen er Antritt.
 
 Und hier wird die große Grüne Basis spannend: Bleiben sie treu? geschlossen zur SPÖ? oder Vollaufsplitterung inkl. ALI, LI, KPÖ?
 
-Ich sehe bei der Ausgangslage verdammt gute Karten für die/den Liste Innsbruck Kandidat/in, (solang es nicht O-P ist), evtl. der Lukas Krackl?",5,2023-08-26 05:08:34,0,SPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.030087128281593323]","['negative', 0.20001786947250366]","['neutral', 0.7698950171470642]",neutral
-kaisermax6020,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,SPÖ,fr3shpatch,jxq3w73,t3_1614lny,"Mesut Onay(ALI) kann mit einem starken Programm und halt einer guten Kampagne durchaus eine Wildcard sein.
+Ich sehe bei der Ausgangslage verdammt gute Karten für die/den Liste Innsbruck Kandidat/in, (solang es nicht O-P ist), evtl. der Lukas Krackl?",5,2023-08-26 05:08:34,0,SPÖ,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,erstens vorbereitete VPsplitter passieren wovon stark ausgehe kommt Lassenberger fix Stichwahl verlieren egal wen Frage mehr wen Antritt groe Grne Basis spannend Bleiben treu geschlossen SP Vollaufsplitterung inkl ALI LI KP sehe Ausgangslage verdammt gute Karten fr dieden Liste Innsbruck Kandidatin solang OP evtl Lukas Krackl,NEUTRAL,0.6393768191337585,1.3606231808662415
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,SPÖ,fr3shpatch,jxq3w73,t3_1614lny,"Mesut Onay(ALI) kann mit einem starken Programm und halt einer guten Kampagne durchaus eine Wildcard sein.
 
 Und eine starke ALI, könnte durchaus mit den SPÖ und Grünen zusammenarbeiten...
 
-Das wichtigste bei den Grünen ist, dass die Uschi verschwindet...",6,2023-08-25 18:05:32,1,SPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.018016956746578217]","['negative', 0.03164340555667877]","['neutral', 0.9503396153450012]",neutral
-NeedleworkerLeast356,1bo34pc,Stichwahl-Umfrage IBK,"Oha. 
+Das wichtigste bei den Grünen ist, dass die Uschi verschwindet...",6,2023-08-25 18:05:32,1,SPÖ,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,Mesut OnayALI starken Programm halt guten Kampagne durchaus Wildcard starke ALI knnte durchaus SP Grnen zusammenarbeiten wichtigste Grnen Uschi verschwindet,NEGATIVE,0.6393443942070007,0.36065560579299927
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,SPÖ,Independent_Duck7844,jxpzibi,t3_1614lny,"I versteh nit warum die SPÖ so schwach is, als „arbeiterpartei“ isses ja ziemlich einfach a gscheids interessantes Wahlprogramm aufzustellen. Die Leut dort können ja garnit so deppat sein eig oder is des gewollt",1,2023-08-25 17:38:08,3,SPÖ,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,I versteh nit warum SP schwach is arbeiterpartei isses ja ziemlich einfach a gscheids interessantes Wahlprogramm aufzustellen Leut knnen ja garnit deppat eig is gewollt,NEGATIVE,0.9764506220817566,0.023549377918243408
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,SPÖ,fatzgenfatz,jxq6iej,t1_jxpzibi,Solange verkappte Schwarze wie der Dornauer in der SPÖ den Ton angeben wird sich da nicht viel ändern.,7,2023-08-25 18:22:05,1,SPÖ,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,Solange verkappte Schwarze Dornauer SP Ton angeben ndern,NEUTRAL,0.9956530332565308,1.0043469667434692
+sadCrane2,1bo34pc,Stichwahl-Umfrage IBK,"Oha. 
 
 Umfrage-Infos:
 IMAD, n = 800
 Mixed Method (persönlich + online-Panel)
 Umfragezeitraum: 14.03.-20.03.",2024-03-26 08:54:51,SPÖ,Kabelbrand,kwx9eb2,t1_kwx2ffs,"Auch dem Anzengruber geb ich realistische Chancen. Je nach dem wie er sich schlagt dem Tursky auch noch (auf Kosten vom Anzi wahrscheinlich). 
 
-Aber die Elli Mayr als Person und die SPÖ als Partei sind in Innsbruck jetz nie so stark gewesen und haben mMn auch nicht so viel verändert, als dass sich das dieses Mal ändern wird.",1,2024-03-28 07:34:21,1,SPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.0015073472168296576]","['negative', 0.004559551365673542]","['neutral', 0.9939331412315369]",neutral
-NeedleworkerLeast356,1bo34pc,Stichwahl-Umfrage IBK,"Oha. 
+Aber die Elli Mayr als Person und die SPÖ als Partei sind in Innsbruck jetz nie so stark gewesen und haben mMn auch nicht so viel verändert, als dass sich das dieses Mal ändern wird.",1,2024-03-28 07:34:21,1,SPÖ,Innsbruck,Tirol,Oha UmfrageInfos IMAD n Mixed Method persnlich onlinePanel Umfragezeitraum,Anzengruber geb realistische Chancen Je schlagt Tursky Kosten Anzi wahrscheinlich Elli Mayr Person SP Partei Innsbruck jetz nie stark mMn verndert Mal ndern,NEUTRAL,0.9003157019615173,1.0996842980384827
+sadCrane2,1bo34pc,Stichwahl-Umfrage IBK,"Oha. 
 
 Umfrage-Infos:
 IMAD, n = 800
 Mixed Method (persönlich + online-Panel)
-Umfragezeitraum: 14.03.-20.03.",2024-03-26 08:54:51,SPÖ,goetterkomplex,kwmeujq,t1_kwmcw97,Mal deppat gfragt: Sind des 2 Unterschiedliche Kastl? Also kann ich z.b. KPÖ fürn Gemeinderat und SPÖ für Bürgermeister wählen?,9,2024-03-26 10:32:11,1,SPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.013952848501503468]","['negative', 0.03215548023581505]","['neutral', 0.9538916349411011]",neutral
-Ellmut,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
-",2024-03-25 11:06:32,FPÖ,assumptionkrebs1990,kwhtn90,t3_1bnaxms,"Was heißt hier ""muss""? Ich werde den Willi so oder so wählen, wie die FPÖ auf Platz 1 sein kann verstehe ich nicht.",0,2024-03-25 15:03:48,1,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.03421283885836601]","['negative', 0.3495554029941559]","['neutral', 0.6162317991256714]",neutral
-Ellmut,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
-",2024-03-25 11:06:32,FPÖ,This-Resource-4702,kwixc4h,t3_1bnaxms,"Is oanfach a Umfrage de vu die grünen gmacht woan is, is klar dass sie sagen dass die fpö vorne is dass mehr leit die grünen wählen",1,2024-03-25 18:41:11,0,FPÖ,Innsbruck,POSITIVE,1.0,2.0,"['positive', 0.8464959263801575]","['negative', 0.14765943586826324]","['neutral', 0.0058445739559829235]",positive
-Ellmut,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
-",2024-03-25 11:06:32,FPÖ,fapp0r,kwi0342,t1_kwhy52w,"Die FPÖ ist eine rechtsradikale Partei. Sie setzt sich für die Kürzung von Sozialleistungen ein und bedient sich einer vorurteilsbehafteten, aufhetzenden Sprache. Sie ist russlandfreundlich. Etc pp",13,2024-03-25 15:40:57,1,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 5.620006049866788e-05]","['negative', 0.00011760849156416953]","['neutral', 0.9998262524604797]",neutral
-MaSta1986,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+Umfragezeitraum: 14.03.-20.03.",2024-03-26 08:54:51,SPÖ,goetterkomplex,kwmeujq,t1_kwmcw97,Mal deppat gfragt: Sind des 2 Unterschiedliche Kastl? Also kann ich z.b. KPÖ fürn Gemeinderat und SPÖ für Bürgermeister wählen?,9,2024-03-26 10:32:11,1,SPÖ,Innsbruck,Tirol,Oha UmfrageInfos IMAD n Mixed Method persnlich onlinePanel Umfragezeitraum,Mal deppat gfragt Unterschiedliche Kastl zb KP frn Gemeinderat SP fr Brgermeister whlen,NEUTRAL,0.9686902761459351,1.031309723854065
+soreOcelot4,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
+
+|Liste|Wahlkampfkosten|Stimmen - Mandate - Prozent|Ausgaben/Stimme|Ausgaben/Mandat|
+|:-|:-|:-|:-|:-|
+|Tursky/ÖVP|690.000€|6.073  -  4 - 10,15%|113,62€| 172.000€|
+|Liste Fritz|200.000€|3.291  -  2 - 5,50%|60,77€| 100.000€ |
+|Grüne|450.000€|11.286 - 8 - 18,87%|39,87€| 56.250€|
+|SPÖ|280.000€|8.122  -  6 - 13,58%|34,47€| 46.667€|
+|FPÖ|300.000€|9.096  -  7 - 15,21%|32,98€| 42.857€ |
+|JA - Anzengruber|250.000€|10.067 - 8 - 16,83%|24,83€| 31.250€|
+|Alternative Liste|37.000€|2.889  -  2 - 4,83%|12,81€| 18.500€ |
+|KPÖ|20.000€|4.020  -  3 - 6,72%|4,98€| 6.667€ |
+
+&#x200B;
+
+Honorable Mentions (4% Hürde nicht erreicht):
+
+|Liste|Wahlkampfkosten|Stimmen - Prozent|Ausgaben/Stimme|
+|:-|:-|:-|:-|
+|NEOS|47.500€|2.102 - 3,51%|22,60€|
+|Gerechtes Innsbruck|15.000€|2.081 - 3,48%|7,21€|
+|DU - Die Unabhängigen|20.000€|177    - 0,30%|112,99€|
+|EINIG Innsbruck|40.000€|406    - 0,68%|98,52€|
+|TUN|3.000€|204    - 0,34%|14,71€|
+
+Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,SPÖ,FeatheryRobin,kzwzgej,t1_kzwr8nw,"Die KPÖ hatte vergleichsweise recht wenige Aufsteller. Ja, an gewissen Orten forciert, wo sie auch die Wähler vermuteten. Sie hatten auch nur bescheidene Papp-Banner, primär um Bäume herum.
+
+Die FPÖ hat die ganzen Autobahnauffahrten, Bundesstraßen und Hauptverkehrsstraßen vom Berufsverkehr in und um Innsbruck zugekleistert. Frecherweise wurden dann zum Wahltag auch noch (zumindest um meinem Sprengel) KPÖ Plakate runtergerissen und mit FPÖ, SPÖ und ÖVP Plakaten überklebt.",7,2024-04-17 00:35:27,0,SPÖ,Innsbruck,Tirol,xB ListeWahlkampfkostenStimmen Mandate ProzentAusgabenStimmeAusgabenMandat TurskyVP Liste Fritz Grne SP FP JA Anzengruber Alternative Liste KP xB Honorable Mentions Hrde erreicht ListeWahlkampfkostenStimmen ProzentAusgabenStimme NEOS Gerechtes Innsbruck Unabhngigen Innsbruck TUN Quelle gerechnet Rechenfehler ausgebessert httpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungenahttpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungena,KP vergleichsweise recht wenige Aufsteller Ja gewissen Orten forciert Whler vermuteten bescheidene PappBanner primr Bume herum FP ganzen Autobahnauffahrten Bundesstraen Hauptverkehrsstraen Berufsverkehr Innsbruck zugekleistert Frecherweise wurden Wahltag zumindest Sprengel KP Plakate runtergerissen FP SP VP Plakaten berklebt,NEUTRAL,0.6411485075950623,1.3588514924049377
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,AttemptAdmirable3515,kwik3ra,t3_1bnaxms,Ich kann und werde es nie verstehen wie man die FPÖ wählen kann.,9,2024-03-25 17:28:53,0,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,nie verstehen FP whlen,NEUTRAL,0.7279651761054993,1.2720348238945007
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,assumptionkrebs1990,kwhtn90,t3_1bnaxms,"Was heißt hier ""muss""? Ich werde den Willi so oder so wählen, wie die FPÖ auf Platz 1 sein kann verstehe ich nicht.",0,2024-03-25 15:03:48,1,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,heit Willi whlen FP Platz verstehe,NEUTRAL,0.7488941550254822,1.2511058449745178
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,This-Resource-4702,kwixc4h,t3_1bnaxms,"Is oanfach a Umfrage de vu die grünen gmacht woan is, is klar dass sie sagen dass die fpö vorne is dass mehr leit die grünen wählen",1,2024-03-25 18:41:11,0,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,Is oanfach a Umfrage de vu grnen gmacht woan is is klar sagen fp vorne is mehr leit grnen whlen,NEUTRAL,0.8264548182487488,1.1735451817512512
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,ratsmb,kwizdtu,t3_1bnaxms,"Wähl sowieso nicht FPÖ. Anzi kann es ja versuchen, vielleicht macht er so gut wie damals auf der Arzler Alm.",0,2024-03-25 18:52:30,0,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,Whl sowieso FP Anzi ja versuchen vielleicht macht gut damals Arzler Alm,NEGATIVE,0.5891324877738953,0.41086751222610474
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,fapp0r,kwi0342,t1_kwhy52w,"Die FPÖ ist eine rechtsradikale Partei. Sie setzt sich für die Kürzung von Sozialleistungen ein und bedient sich einer vorurteilsbehafteten, aufhetzenden Sprache. Sie ist russlandfreundlich. Etc pp",13,2024-03-25 15:40:57,1,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,FP rechtsradikale Partei setzt fr Krzung Sozialleistungen bedient vorurteilsbehafteten aufhetzenden Sprache russlandfreundlich Etc pp,NEUTRAL,0.9959982633590698,1.0040017366409302
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,No author,kwi52gh,t1_kwhy52w,"Weil man mit einem gesunden Verstand recht schnell unterscheiden kann zwischen Worte und Taten.
+Jeder kann irgendwas auf die Website schreiben, was zählt sind Taten und da ist die FPÖ ganz oben mit dabei, wenn es um Bullshit-Aktionen geht.
+
+Ich kann auch schreiben, dass ich für Weltfrieden bin. Wenn ich ein Rüstungskonzern bin, glaubst mir das dann?",8,2024-03-25 16:08:46,1,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,gesunden Verstand recht schnell unterscheiden Worte Taten irgendwas Website schreiben zhlt Taten FP ganz oben dabei BullshitAktionen geht schreiben fr Weltfrieden Rstungskonzern glaubst,NEUTRAL,0.5866948366165161,1.4133051633834839
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,No author,kwixsyr,t1_kwib8ju,"Weiß eben nicht jeder.
+Und nur weil es die stärkste Partei ist, heißt das nicht, dass es die richtige Partei ist.
+Aber wenn ich dir das erklären muss, bist du entweder FPÖ-Mitglied oder hast in Geschichte nicht aufgepasst. Da hatte 1938 auch eine Partei die Mehrheit.
+
+Die Downvotes bekommst du leider, weil Leute nicht glauben können, dass du es wirklich nicht verstehst",1,2024-03-25 18:43:47,1,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,Wei eben strkste Partei heit richtige Partei erklren entweder FPMitglied hast Geschichte aufgepasst Partei Mehrheit Downvotes bekommst leider Leute glauben knnen wirklich verstehst,NEUTRAL,0.5042111873626709,1.495788812637329
+sheepishPaella1,1bnaxms,Bürgermeister Willi überholt: FPÖ ist auf Platz 1 in Innsbruck,"Na super. 😬 Dann muss ma ja fast schon in Willi wählen. 
+",2024-03-25 11:06:32,FPÖ,No author,kwiyz23,t1_kwiyam6,"Es ging ja darum zu zeigen, dass nur weil viele Leute eine Partei wählen, es nicht der richtige Weg sein muss. 
+
+Keiner sagt, dass wir 1938 haben (auch wenn es sich viele Blaue wahrscheinlich wünschen würden)
+
+
+Hast du das Rechtsextremen Treffen mit AFD und FPÖ Leuten nicht mitbekommen? Damit sollte alles gesagt sein",0,2024-03-25 18:50:17,1,FPÖ,Innsbruck,Tirol,Na super ma ja fast schon Willi whlen,ging ja darum zeigen viele Leute Partei whlen richtige sagt viele Blaue wahrscheinlich wnschen wrden Hast Rechtsextremen Treffen AFD FP Leuten mitbekommen gesagt,NEUTRAL,0.6755407452583313,1.3244592547416687
+soreOcelot4,1c4rr28,Die Listenzweite bei JA ist Lassenberger's Partnerin.,"Falls ihr es noch nicht wisst: Mariella Lutz, die Listenzweite bei Anzengruber's JA ist die Partnerin von Lassenberger, dem FPÖ-Bürgermeisterkandidaten. Bei JA steckt auch FPÖ drin. Nur als Info für die, denen Grün auch lieber als Blau ist.
+https://www.derstandard.at/story/3000000215729/eine-stadt-so-blau-wie-der-himmel-fpoe-lassenberger-will-innsbrucker-buergermeister-werden",2024-04-15 17:17:45,FPÖ,No author,kzpjhm2,t3_1c4rr28,"Dass die ÖVP und die FPÖ eine große Schnittmenge haben ist aber wirklich kein Geheimnis.
+Wer das nicht selber sieht, muss die letzten Jahre blind gewesen sein.
+
+Unter Willi passiert halt leider auch nicht mehr, versteh gar nicht, wie er wieder so gewinnen konnte. Vor 5 Jahren hat er den Studenten und Innsbruckern alles versprochen, Hauptthema Wohnbau - wo stehen wir jetzt? Noch teurer und gleich wenig Wohnmöglichkeiten.
+
+Bin auf keinen Fall pro FPÖVP, aber was alle mit dem Willi haben check ich auch nicht.",7,2024-04-15 17:40:18,3,FPÖ,Innsbruck,Tirol,Falls wisst Mariella Lutz Listenzweite Anzengrubers JA Partnerin Lassenberger FPBrgermeisterkandidaten JA steckt FP drin Info fr denen Grn lieber Blau httpswwwderstandardatstoryeinestadtsoblauwiederhimmelfpoelassenbergerwillinnsbruckerbuergermeisterwerden,VP FP groe Schnittmenge wirklich Geheimnis Wer selber sieht letzten Jahre blind Willi passiert halt leider mehr versteh gar gewinnen konnte Jahren Studenten Innsbruckern versprochen Hauptthema Wohnbau stehen teurer gleich wenig Wohnmglichkeiten Fall pro FPVP Willi check,NEGATIVE,0.6749719977378845,0.3250280022621155
+soreOcelot4,1c4rr28,Die Listenzweite bei JA ist Lassenberger's Partnerin.,"Falls ihr es noch nicht wisst: Mariella Lutz, die Listenzweite bei Anzengruber's JA ist die Partnerin von Lassenberger, dem FPÖ-Bürgermeisterkandidaten. Bei JA steckt auch FPÖ drin. Nur als Info für die, denen Grün auch lieber als Blau ist.
+https://www.derstandard.at/story/3000000215729/eine-stadt-so-blau-wie-der-himmel-fpoe-lassenberger-will-innsbrucker-buergermeister-werden",2024-04-15 17:17:45,FPÖ,userrr3,kzpqitr,t1_kzpjhm2,"Willis großes Problem war die Gemeinderatsmehrheit gegen ihn, gegen die er fast nichts umsetzen konnte. Man hat sich gegenseitig, vor allem eben auch dme Bgm, nichts vergönnt, und dass die FPÖVP von sinnvollen Beschlüssen nichts hält war ja eigentlich auch nicht überraschend. Sie habens halt zt erfolgreich dem Bgm in die Schuhe geschoben",20,2024-04-15 18:19:29,1,FPÖ,Innsbruck,Tirol,Falls wisst Mariella Lutz Listenzweite Anzengrubers JA Partnerin Lassenberger FPBrgermeisterkandidaten JA steckt FP drin Info fr denen Grn lieber Blau httpswwwderstandardatstoryeinestadtsoblauwiederhimmelfpoelassenbergerwillinnsbruckerbuergermeisterwerden,Willis groes Problem Gemeinderatsmehrheit fast umsetzen konnte gegenseitig eben dme Bgm vergnnt FPVP sinnvollen Beschlssen hlt ja eigentlich berraschend habens halt zt erfolgreich Bgm Schuhe geschoben,NEGATIVE,0.9651723504066467,0.03482764959335327
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+
+Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
+
+Im Vergleich dazu die anderen Gegenkandidaten: Markus Lassenberger - Exekutivbeamter der Polizei in Tirol
+
+Florian Tursky - Staatssekretär für Digitalisierung und Telekommunikation in der Bundesregierung Nehammer
+
+Julia Seidl - Selbständige Unternehmerin, Geschäftsführerin Einzelhandel Redakteurin, Verkäuferin
+
+Andrea Haselwanter-Schneider - diplomierte Krankenschwester, Lehrerin am AZW
+
+Gerald Depaoli - 29 Jahre bei Berufsfeuerwehr Innsbruck
+
+Mesut Onay - Makler
+
+Elli Mayr - Kellnerin, Lehrerin, Lektorin
+
+Helmut Reichholf - Unternehmer
+
+Johannes Anzengruber - Pächter
+
+Franz Christian Veber - Unternehmer
+
+Helmut Buchacher - 40 Jahren bei den Innsbrucker Verkehrsbetrieben – davon 30 als Betriebsratschef
+
+Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,guy_inkognito84,kz7fkpk,t3_1c23q5p,"Ich will hier jetzt kein weiteres Fass aufmachen, aber ich versteh nicht so ganz, woher der Gedanke „Politiker ist kein richtiger Beruf“ kommt und nur ein Job in der Privatwirtschaft ist was wert. Wir wollen überall Profis haben, die eine Ahnung von dem haben, was sie hackln, aber in der Politik ist das blöd? Oder anders: Ich würde jetzt niemanden wählen, nur, weil er den gleichen Job hat wie ich – der kennt vielleicht meine (Arbeits-)Realität gut, kann aber politisch genauso ein Trottel sein wie andere.
+
+Und natürlich ist „Ich will keinen FPÖ-Bürgermeister in Innsbruck“ ein Motiv. Dann ist das halt eine strategische Wahl für das (subjektiv) geringere Übel mit großen Chancen. Das werden ein paar Anzengruber- und Tursky-Wähler auch so handhaben, mit dem Unterschied, dass die halt ihren jeweiligen Kandidaten als aussichtsreichsten Lassenberger-Verhinderer sehen.",23,2024-04-12 08:41:56,2,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,weiteres Fass aufmachen versteh ganz woher Gedanke Politiker richtiger Beruf kommt Job Privatwirtschaft wert berall Profis Ahnung hackln Politik bld wrde niemanden whlen gleichen Job kennt vielleicht ArbeitsRealitt gut politisch genauso Trottel natrlich FPBrgermeister Innsbruck Motiv halt strategische Wahl fr subjektiv geringere bel groen Chancen paar Anzengruber TurskyWhler handhaben Unterschied halt jeweiligen Kandidaten aussichtsreichsten LassenbergerVerhinderer sehen,NEUTRAL,0.5400415062904358,1.4599584937095642
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
 
 Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
 
@@ -98,8 +226,149 @@ Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,assumptionkrebs1990,kz84
 
 Der andere ist, dass ich die Hauptverantwortung für den Stillstand mehr bei den konversativen Parteien sehe als beim Willi und diese Blockadestrategie nicht belohnen will. Die FPÖ-Plakate sind wieder unterste Schublade (da schon politischer Kindergarten angeführt wurde (und damit beziehe ich mich mehr auf die Plakate selbst als die einfallslosen Beschmirereien mit den schwarzen Streifen¹)), aber bei welcher Wahl ist das nicht so? 
 
-¹ Die ""Ausbesserungen"" gewisser blauer Wahlbanner (z.B. es gibt viele Gründe die FPÖ ^**nicht** zu wählen, einer davon heißt ~~Georg Willi~~ **gesunder Menschenverstand**) sind da schon leicht kreativer (auch wenn ich das, eher aus Prinzip als der Message dahinter, ebenfalls nicht gutheiße).",6,2024-04-12 12:42:45,0,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.013067795895040035]","['negative', 0.04051043093204498]","['neutral', 0.94642174243927]",neutral
-MaSta1986,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+¹ Die ""Ausbesserungen"" gewisser blauer Wahlbanner (z.B. es gibt viele Gründe die FPÖ ^**nicht** zu wählen, einer davon heißt ~~Georg Willi~~ **gesunder Menschenverstand**) sind da schon leicht kreativer (auch wenn ich das, eher aus Prinzip als der Message dahinter, ebenfalls nicht gutheiße).",6,2024-04-12 12:42:45,0,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,NichtWahlmotiv Hauptgrnde warum ganze Familie Sonntag eventvuellen Stichwahl whlen geht gltige Stimme halt Stimme fr gewhlt Gegenstimme fr gerne Prferenzsystem htte Willi loswerden Hauptverantwortung fr Stillstand mehr konversativen Parteien sehe beim Willi Blockadestrategie belohnen FPPlakate unterste Schublade schon politischer Kindergarten angefhrt wurde beziehe mehr Plakate einfallslosen Beschmirereien schwarzen Streifen Wahl Ausbesserungen gewisser blauer Wahlbanner zB gibt viele Grnde FP whlen davon heit Georg Willi gesunder Menschenverstand schon leicht kreativer eher Prinzip Message dahinter ebenfalls gutheie,NEUTRAL,0.8088930249214172,1.1911069750785828
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+
+Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
+
+Im Vergleich dazu die anderen Gegenkandidaten: Markus Lassenberger - Exekutivbeamter der Polizei in Tirol
+
+Florian Tursky - Staatssekretär für Digitalisierung und Telekommunikation in der Bundesregierung Nehammer
+
+Julia Seidl - Selbständige Unternehmerin, Geschäftsführerin Einzelhandel Redakteurin, Verkäuferin
+
+Andrea Haselwanter-Schneider - diplomierte Krankenschwester, Lehrerin am AZW
+
+Gerald Depaoli - 29 Jahre bei Berufsfeuerwehr Innsbruck
+
+Mesut Onay - Makler
+
+Elli Mayr - Kellnerin, Lehrerin, Lektorin
+
+Helmut Reichholf - Unternehmer
+
+Johannes Anzengruber - Pächter
+
+Franz Christian Veber - Unternehmer
+
+Helmut Buchacher - 40 Jahren bei den Innsbrucker Verkehrsbetrieben – davon 30 als Betriebsratschef
+
+Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,Borreliose666,kz7do86,t3_1c23q5p,"Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv ---> das dachte ich mir auch als ich das gelesen habe !!!!!!
+
+Beim Depaoli musst korrigieren dass er die letzten zwei Jahre (glaub ich war die zeitspanne) im Kehrwagerln in der Stadt unterwegs war, weils ihn bei der Feuerwehr raußgeschmissen haben oder wie auch immer das im Beamtenjargon heisst. Aufjedenfall habens dort ruhig/ruhend gestellt.",11,2024-04-12 08:18:15,2,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,FPBrgermeister verhindern Wahlmotiv dachte gelesen Beim Depaoli musst korrigieren letzten zwei Jahre glaub zeitspanne Kehrwagerln Stadt unterwegs weils Feuerwehr raugeschmissen immer Beamtenjargon heisst Aufjedenfall habens ruhigruhend gestellt,NEGATIVE,0.918877899646759,0.08112210035324097
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+
+Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
+
+Im Vergleich dazu die anderen Gegenkandidaten: Markus Lassenberger - Exekutivbeamter der Polizei in Tirol
+
+Florian Tursky - Staatssekretär für Digitalisierung und Telekommunikation in der Bundesregierung Nehammer
+
+Julia Seidl - Selbständige Unternehmerin, Geschäftsführerin Einzelhandel Redakteurin, Verkäuferin
+
+Andrea Haselwanter-Schneider - diplomierte Krankenschwester, Lehrerin am AZW
+
+Gerald Depaoli - 29 Jahre bei Berufsfeuerwehr Innsbruck
+
+Mesut Onay - Makler
+
+Elli Mayr - Kellnerin, Lehrerin, Lektorin
+
+Helmut Reichholf - Unternehmer
+
+Johannes Anzengruber - Pächter
+
+Franz Christian Veber - Unternehmer
+
+Helmut Buchacher - 40 Jahren bei den Innsbrucker Verkehrsbetrieben – davon 30 als Betriebsratschef
+
+Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,MaSta1986,kz7fno3,t1_kz7epe8,"Also ich glaub, dass einige am Sonntag dumm drein schaun ,weil die Umfragen sich nicht bewahrheiten werden. Wenn in einer Umfrage die die Grünen selbst durchführten die FPÖ auf Platz 1 liegt und nicht die Grünen selbst, kann man 1:1 zusammenzählen was am Sonntag rauskommt. In den vergangenen Jahren war die FPÖ in Umfragen immer wesentlich schlechter als dann bei der Wahlurne, weil generell die Befragten wenn sie nicht anonym sind lieber eine andere Partei angeben als die FPÖ!
+
+[https://www.meinbezirk.at/innsbruck/c-politik/fpoe-ist-auf-platz-1-in-innsbruck\_a6599649](https://www.meinbezirk.at/innsbruck/c-politik/fpoe-ist-auf-platz-1-in-innsbruck_a6599649)",-19,2024-04-12 08:42:57,1,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,glaub Sonntag dumm drein schaun Umfragen bewahrheiten Umfrage Grnen durchfhrten FP Platz liegt Grnen zusammenzhlen Sonntag rauskommt vergangenen Jahren FP Umfragen immer wesentlich schlechter Wahlurne generell Befragten anonym lieber Partei angeben FP httpswwwmeinbezirkatinnsbruckcpolitikfpoeistaufplatzininnsbruckahttpswwwmeinbezirkatinnsbruckcpolitikfpoeistaufplatzininnsbrucka,NEGATIVE,0.55000901222229,0.44999098777770996
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+
+Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
+
+Im Vergleich dazu die anderen Gegenkandidaten: Markus Lassenberger - Exekutivbeamter der Polizei in Tirol
+
+Florian Tursky - Staatssekretär für Digitalisierung und Telekommunikation in der Bundesregierung Nehammer
+
+Julia Seidl - Selbständige Unternehmerin, Geschäftsführerin Einzelhandel Redakteurin, Verkäuferin
+
+Andrea Haselwanter-Schneider - diplomierte Krankenschwester, Lehrerin am AZW
+
+Gerald Depaoli - 29 Jahre bei Berufsfeuerwehr Innsbruck
+
+Mesut Onay - Makler
+
+Elli Mayr - Kellnerin, Lehrerin, Lektorin
+
+Helmut Reichholf - Unternehmer
+
+Johannes Anzengruber - Pächter
+
+Franz Christian Veber - Unternehmer
+
+Helmut Buchacher - 40 Jahren bei den Innsbrucker Verkehrsbetrieben – davon 30 als Betriebsratschef
+
+Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,Key_Initial5943,kz8286a,t1_kz7fkpk,"Ich als Ex Innsbrucker find die Wahlplakate generell lächerlich; ""mit mir gibt's keine FPÖ"" (wow, was für ne Leistung), ""erste Bürgermeisterin"" (ähm okay, krasse Leistung), die anderen Wortlaute hab ich nicht mehr in Kopf, glaub aber du weißt was ich mein. 
+
+Mehr Programm täte der Politik wirklich gut... Ich wähle niemand weil sie eine Frau ist, oder weil er jemand verhindern will...",5,2024-04-12 12:26:29,1,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,Ex Innsbrucker find Wahlplakate generell lcherlich gibts FP wow fr ne Leistung erste Brgermeisterin hm okay krasse Leistung Wortlaute mehr Kopf glaub weit Mehr Programm tte Politik wirklich gut whle niemand Frau jemand verhindern,NEGATIVE,0.8979263305664062,0.10207366943359375
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+
+Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
+
+Im Vergleich dazu die anderen Gegenkandidaten: Markus Lassenberger - Exekutivbeamter der Polizei in Tirol
+
+Florian Tursky - Staatssekretär für Digitalisierung und Telekommunikation in der Bundesregierung Nehammer
+
+Julia Seidl - Selbständige Unternehmerin, Geschäftsführerin Einzelhandel Redakteurin, Verkäuferin
+
+Andrea Haselwanter-Schneider - diplomierte Krankenschwester, Lehrerin am AZW
+
+Gerald Depaoli - 29 Jahre bei Berufsfeuerwehr Innsbruck
+
+Mesut Onay - Makler
+
+Elli Mayr - Kellnerin, Lehrerin, Lektorin
+
+Helmut Reichholf - Unternehmer
+
+Johannes Anzengruber - Pächter
+
+Franz Christian Veber - Unternehmer
+
+Helmut Buchacher - 40 Jahren bei den Innsbrucker Verkehrsbetrieben – davon 30 als Betriebsratschef
+
+Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,Real-Piglet-3992,kz81a6d,t1_kz7yqq7,"+keine FPÖ. Wohnungsvergabe an deutschkenntnisse koppeln, ich glaub s hakt",2,2024-04-12 12:19:24,2,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,FP Wohnungsvergabe deutschkenntnisse koppeln glaub s hakt,NEGATIVE,0.9094847440719604,0.09051525592803955
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
+
+Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
+
+Im Vergleich dazu die anderen Gegenkandidaten: Markus Lassenberger - Exekutivbeamter der Polizei in Tirol
+
+Florian Tursky - Staatssekretär für Digitalisierung und Telekommunikation in der Bundesregierung Nehammer
+
+Julia Seidl - Selbständige Unternehmerin, Geschäftsführerin Einzelhandel Redakteurin, Verkäuferin
+
+Andrea Haselwanter-Schneider - diplomierte Krankenschwester, Lehrerin am AZW
+
+Gerald Depaoli - 29 Jahre bei Berufsfeuerwehr Innsbruck
+
+Mesut Onay - Makler
+
+Elli Mayr - Kellnerin, Lehrerin, Lektorin
+
+Helmut Reichholf - Unternehmer
+
+Johannes Anzengruber - Pächter
+
+Franz Christian Veber - Unternehmer
+
+Helmut Buchacher - 40 Jahren bei den Innsbrucker Verkehrsbetrieben – davon 30 als Betriebsratschef
+
+Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,Key_Initial5943,kz82zq5,t1_kz81a6d,Schon Mal da die meisten FPÖler der deutschen Sprache selbst nicht mächtig sind....,1,2024-04-12 12:32:05,0,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,Schon Mal meisten FPler deutschen Sprache mchtig,POSITIVE,0.6344934701919556,2.3655065298080444
+crummyRaisins5,1c23q5p,Wahlmotiv für Georg Willi?!,"Weils mich persönlich als Ex-Innsbrucker interessiert wieso man Georg Willi wählt bitte um eure Wahlmotive. Weil ,man einen FPÖ-Bürgermeister verhindern will ist kein Wahlmotiv sondern Kindergarten und führt genau dazu dass die FPÖ auf Platz 1 landet ;-)
 
 Ich persönlich fühle mich als jemand der seit der Matura durchgehend in der Privatwirtschaft arbeitet, durch jemanden der in seiner Karriere keinen einzigen Tag in der Privatwirtschaft oder ausserhalb der Politik gearbeitet hat absolut nicht vertreten. Ausser bei unterschiedlichen Positionen der Grünen in Tirol hat er genau gar nichts ""ghacklt""!
 
@@ -129,13 +398,14 @@ Pia Tomedi - Sozialarbeiterin",2024-04-12 08:11:39,FPÖ,West_Tangelo_8180,kzg6tf
 
 Es geht auch nit um den Wohnungskauf.
 
-Strohmänner über Strohmänner…",0,2024-04-13 22:18:29,1,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.02790849283337593]","['negative', 0.464346319437027]","['neutral', 0.5077452063560486]",neutral
-kaisermax6020,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,FPÖ,Apycia,jxsn2ld,t1_jxpzibi,"Innsbruck ist an sich eine sehr bürgerliche und studentische Stadt. Die wenigen Arbeiter, die es gibt wurden in den Randviertln Reichenau und ODorf von der FPÖ abgeholt. 
+Strohmänner über Strohmänner…",0,2024-04-13 22:18:29,1,FPÖ,Innsbruck,Tirol,Weils persnlich ExInnsbrucker interessiert wieso Georg Willi whlt bitte Wahlmotive FPBrgermeister verhindern Wahlmotiv Kindergarten fhrt genau FP Platz landet persnlich fhle jemand seit Matura durchgehend Privatwirtschaft arbeitet jemanden Karriere einzigen Tag Privatwirtschaft ausserhalb Politik gearbeitet absolut vertreten Ausser unterschiedlichen Positionen Grnen Tirol genau gar ghacklt Vergleich Gegenkandidaten Markus Lassenberger Exekutivbeamter Polizei Tirol Florian Tursky Staatssekretr fr Digitalisierung Telekommunikation Bundesregierung Nehammer Julia Seidl Selbstndige Unternehmerin Geschftsfhrerin Einzelhandel Redakteurin Verkuferin Andrea HaselwanterSchneider diplomierte Krankenschwester Lehrerin AZW Gerald Depaoli Jahre Berufsfeuerwehr Innsbruck Mesut Onay Makler Elli Mayr Kellnerin Lehrerin Lektorin Helmut Reichholf Unternehmer Johannes Anzengruber Pchter Franz Christian Veber Unternehmer Helmut Buchacher Jahren Innsbrucker Verkehrsbetrieben davon Betriebsratschef Pia Tomedi Sozialarbeiterin,Erkan dritten Generation immer no kan graden deutschen Satz rausbringt ers Dnerdreher Onkel nit braucht is nit grad Fachkraft Wissenschaft floriert Hr weltfremden Refugees welcome Idealismus bitte meisten Einwanderer Trkei andren islamischen Staaten bildungsferne deswegen holt FP Telfs ja verdrng ma lieber geht nit Wohnungskauf Strohmnner ber Strohmnner,NEGATIVE,0.8373152613639832,0.16268473863601685
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,FPÖ,Apycia,jxsn2ld,t1_jxpzibi,"Innsbruck ist an sich eine sehr bürgerliche und studentische Stadt. Die wenigen Arbeiter, die es gibt wurden in den Randviertln Reichenau und ODorf von der FPÖ abgeholt. 
 
 es braucht keine Arbeiterpartei in einer Stadt, wo Arbeiter politisch irrelevant sind. 
 
-Gleich wie's keine Bauernpartei in Wien braucht. Oder Neos in Bad Oberbrunzndorf.",1,2023-08-26 05:34:36,0,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.00833867397159338]","['negative', 0.02648032456636429]","['neutral', 0.9651809930801392]",neutral
-Landerun,1c1vxm5,Lassenberger,"Lassenberger. Ein Name, den man vielleicht nicht auf den ersten Blick zuordnen kann, dem man aber bei einem gemütlichen Spaziergang durch die Stadt Innsbruck momentan mit Sicherheit über den Weg laufen wird. 
+Gleich wie's keine Bauernpartei in Wien braucht. Oder Neos in Bad Oberbrunzndorf.",1,2023-08-26 05:34:36,0,FPÖ,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,Innsbruck brgerliche studentische Stadt wenigen Arbeiter gibt wurden Randviertln Reichenau ODorf FP abgeholt braucht Arbeiterpartei Stadt Arbeiter politisch irrelevant Gleich wies Bauernpartei Wien braucht Neos Bad Oberbrunzndorf,NEGATIVE,0.6550871133804321,0.34491288661956787
+crushedTruffle5,1614lny,Welche Partei wird nach der Wahl 2024 den Bürgermeister stellen?,"Die Grünen und Willi sind angeschlagen durch das Chaos in der Stadtpolitik und diversen Vorfällen. In der ÖVP gehts grad heiß umher, so soll ja Florian Tursky von vielen in der Partei der favorisierte Kandidat sein und die FPÖ ist bundesweit im Höhenflug. Die SPÖ wird in Innsbruck keine relevanten Sprünge machen. Das wird eine sehr spannende Wahl, also was glaubt ihr, wer das Rennen machen wird?",2023-08-25 16:51:57,FPÖ,Naranox,jxtf1qr,t1_jxs7737,average fpö wähler,6,2023-08-26 11:38:47,0,FPÖ,Innsbruck,Tirol,Grnen Willi angeschlagen Chaos Stadtpolitik diversen Vorfllen VP gehts grad hei umher ja Florian Tursky vielen Partei favorisierte Kandidat FP bundesweit Hhenflug SP Innsbruck relevanten Sprnge spannende Wahl glaubt wer Rennen,average fp whler,NEGATIVE,0.8137223720550537,0.1862776279449463
+cautiousLollies9,1c1vxm5,Lassenberger,"Lassenberger. Ein Name, den man vielleicht nicht auf den ersten Blick zuordnen kann, dem man aber bei einem gemütlichen Spaziergang durch die Stadt Innsbruck momentan mit Sicherheit über den Weg laufen wird. 
 Tja, ich maße mir jetzt einfach mal an zu behaupten, dass die meisten Mitglieder auf diesem Reddit mit der FPÖ und damit auch mit jenem Kandidaten nicht allzu viel anfangen können.
 Für jene für die das nicht gilt, gibts hier nichts zu lesen, denn die werden das Untenstehende entweder nicht glauben oder ihm keine Beachtung schenken.
 
@@ -143,8 +413,63 @@ Für die anderen habe ich eine interessante Information. Eine mir persönlich se
 Macht mit der Info was ihr wollt, wollte das nurmal hier teilen. Und bitte, falls jemand anderer noch solche Erfahrungen mit dem Herrn erlebt hat, bitte gebt mir ein Kommentar darauf.
 
 Mit freundlichen Grüßen,
-Anonym",2024-04-12 00:59:35,FPÖ,Heckencognac,kz6xn5a,t3_1c1vxm5,Wer bei der FPÖ ist kann ja auch nicht ganz Knusper sein,23,2024-04-12 05:17:46,1,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.044929299503564835]","['negative', 0.3752046525478363]","['neutral', 0.5798660516738892]",neutral
-ygoldberg,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
+Anonym",2024-04-12 00:59:35,FPÖ,mr2cef,kz7600n,t3_1c1vxm5,"Vorweg ich schneide mir lieber den Arm ab als Fpö zu wählen. Aber diese Info ist a Blödsinn. Man (sollte)  Leute wegen der Politik, die sie machen werden, nicht weil sie so oder anders in der Schule waren, wählen.",20,2024-04-12 06:46:32,1,FPÖ,Innsbruck,Tirol,Lassenberger Name vielleicht ersten Blick zuordnen gemtlichen Spaziergang Stadt Innsbruck momentan Sicherheit ber laufen Tja mae einfach mal behaupten meisten Mitglieder Reddit FP Kandidaten allzu anfangen knnen Fr fr gilt gibts lesen Untenstehende entweder glauben Beachtung schenken Fr interessante Information persnlich gut bekannte Person mei Muata Person gleiche Klasse besucht wurde Person laut Aussage stark gemobbt Generell scheint Herr Lassenberger ungemtlicheren Personen Schule wurde Schlgen Anspucken berichtet Herren zurckzufhren Macht Info wollt nurmal teilen bitte falls jemand Erfahrungen Herrn erlebt bitte gebt Kommentar darauf freundlichen Gren Anonym,Vorweg schneide lieber Arm ab Fp whlen Info a Bldsinn Leute wegen Politik Schule whlen,NEGATIVE,0.7705914378166199,0.22940856218338013
+cautiousLollies9,1c1vxm5,Lassenberger,"Lassenberger. Ein Name, den man vielleicht nicht auf den ersten Blick zuordnen kann, dem man aber bei einem gemütlichen Spaziergang durch die Stadt Innsbruck momentan mit Sicherheit über den Weg laufen wird. 
+Tja, ich maße mir jetzt einfach mal an zu behaupten, dass die meisten Mitglieder auf diesem Reddit mit der FPÖ und damit auch mit jenem Kandidaten nicht allzu viel anfangen können.
+Für jene für die das nicht gilt, gibts hier nichts zu lesen, denn die werden das Untenstehende entweder nicht glauben oder ihm keine Beachtung schenken.
+
+Für die anderen habe ich eine interessante Information. Eine mir persönlich sehr gut bekannte Person (mei Muata) hat mit jener Person die gleiche Klasse besucht und wurde von dieser Person, laut ihrer Aussage, stark gemobbt. Generell scheint Herr Lassenberger eine der ungemütlicheren Personen auf der Schule gewesen zu sein. Mir wurde von Schlägen bis Anspucken berichtet, das auf diesen Herren zurückzuführen ist.
+Macht mit der Info was ihr wollt, wollte das nurmal hier teilen. Und bitte, falls jemand anderer noch solche Erfahrungen mit dem Herrn erlebt hat, bitte gebt mir ein Kommentar darauf.
+
+Mit freundlichen Grüßen,
+Anonym",2024-04-12 00:59:35,FPÖ,Heckencognac,kz6xn5a,t3_1c1vxm5,Wer bei der FPÖ ist kann ja auch nicht ganz Knusper sein,23,2024-04-12 05:17:46,1,FPÖ,Innsbruck,Tirol,Lassenberger Name vielleicht ersten Blick zuordnen gemtlichen Spaziergang Stadt Innsbruck momentan Sicherheit ber laufen Tja mae einfach mal behaupten meisten Mitglieder Reddit FP Kandidaten allzu anfangen knnen Fr fr gilt gibts lesen Untenstehende entweder glauben Beachtung schenken Fr interessante Information persnlich gut bekannte Person mei Muata Person gleiche Klasse besucht wurde Person laut Aussage stark gemobbt Generell scheint Herr Lassenberger ungemtlicheren Personen Schule wurde Schlgen Anspucken berichtet Herren zurckzufhren Macht Info wollt nurmal teilen bitte falls jemand Erfahrungen Herrn erlebt bitte gebt Kommentar darauf freundlichen Gren Anonym,Wer FP ja ganz Knusper,NEGATIVE,0.6038564443588257,0.3961435556411743
+cautiousLollies9,1c1vxm5,Lassenberger,"Lassenberger. Ein Name, den man vielleicht nicht auf den ersten Blick zuordnen kann, dem man aber bei einem gemütlichen Spaziergang durch die Stadt Innsbruck momentan mit Sicherheit über den Weg laufen wird. 
+Tja, ich maße mir jetzt einfach mal an zu behaupten, dass die meisten Mitglieder auf diesem Reddit mit der FPÖ und damit auch mit jenem Kandidaten nicht allzu viel anfangen können.
+Für jene für die das nicht gilt, gibts hier nichts zu lesen, denn die werden das Untenstehende entweder nicht glauben oder ihm keine Beachtung schenken.
+
+Für die anderen habe ich eine interessante Information. Eine mir persönlich sehr gut bekannte Person (mei Muata) hat mit jener Person die gleiche Klasse besucht und wurde von dieser Person, laut ihrer Aussage, stark gemobbt. Generell scheint Herr Lassenberger eine der ungemütlicheren Personen auf der Schule gewesen zu sein. Mir wurde von Schlägen bis Anspucken berichtet, das auf diesen Herren zurückzuführen ist.
+Macht mit der Info was ihr wollt, wollte das nurmal hier teilen. Und bitte, falls jemand anderer noch solche Erfahrungen mit dem Herrn erlebt hat, bitte gebt mir ein Kommentar darauf.
+
+Mit freundlichen Grüßen,
+Anonym",2024-04-12 00:59:35,FPÖ,Simple-Bedroom-8842,kz76azf,t3_1c1vxm5,Hat die FPÖ nit gnuag inhaltliche Angriffsfläche? Muass man do irgendwelche Rotzbuabn Gschichtln auspacken?,7,2024-04-12 06:49:58,0,FPÖ,Innsbruck,Tirol,Lassenberger Name vielleicht ersten Blick zuordnen gemtlichen Spaziergang Stadt Innsbruck momentan Sicherheit ber laufen Tja mae einfach mal behaupten meisten Mitglieder Reddit FP Kandidaten allzu anfangen knnen Fr fr gilt gibts lesen Untenstehende entweder glauben Beachtung schenken Fr interessante Information persnlich gut bekannte Person mei Muata Person gleiche Klasse besucht wurde Person laut Aussage stark gemobbt Generell scheint Herr Lassenberger ungemtlicheren Personen Schule wurde Schlgen Anspucken berichtet Herren zurckzufhren Macht Info wollt nurmal teilen bitte falls jemand Erfahrungen Herrn erlebt bitte gebt Kommentar darauf freundlichen Gren Anonym,FP nit gnuag inhaltliche Angriffsflche Muass do irgendwelche Rotzbuabn Gschichtln auspacken,NEUTRAL,0.802735447883606,1.197264552116394
+cautiousLollies9,1c1vxm5,Lassenberger,"Lassenberger. Ein Name, den man vielleicht nicht auf den ersten Blick zuordnen kann, dem man aber bei einem gemütlichen Spaziergang durch die Stadt Innsbruck momentan mit Sicherheit über den Weg laufen wird. 
+Tja, ich maße mir jetzt einfach mal an zu behaupten, dass die meisten Mitglieder auf diesem Reddit mit der FPÖ und damit auch mit jenem Kandidaten nicht allzu viel anfangen können.
+Für jene für die das nicht gilt, gibts hier nichts zu lesen, denn die werden das Untenstehende entweder nicht glauben oder ihm keine Beachtung schenken.
+
+Für die anderen habe ich eine interessante Information. Eine mir persönlich sehr gut bekannte Person (mei Muata) hat mit jener Person die gleiche Klasse besucht und wurde von dieser Person, laut ihrer Aussage, stark gemobbt. Generell scheint Herr Lassenberger eine der ungemütlicheren Personen auf der Schule gewesen zu sein. Mir wurde von Schlägen bis Anspucken berichtet, das auf diesen Herren zurückzuführen ist.
+Macht mit der Info was ihr wollt, wollte das nurmal hier teilen. Und bitte, falls jemand anderer noch solche Erfahrungen mit dem Herrn erlebt hat, bitte gebt mir ein Kommentar darauf.
+
+Mit freundlichen Grüßen,
+Anonym",2024-04-12 00:59:35,FPÖ,Senior-Mine3593,kz6ibcu,t3_1c1vxm5,"Das hätte er besser Lassenberger. Verstehe nicht di, die den Trotzdemberger wählen. Ich mache lieber Kreuzerl bei einem Andersberger.
+
+
+Im Ernst: was nützt dir der Post. Damit schadest du maximal dir  selbst.
+
+Mei Mamaaa hooooz gsoooogt mui mui mui. Das ist einfach erbärmlich. Die quellenlose FPÖ ist tief und absolut daneben, aber du holst dich damit genau auf denselben Posten runter auf dem die blauen, korrupten, faschistischen, antisemitischen, antidemokratischen Hanswürste sitzen.
+
+Ich meine du bist irgendwo immer noch besser, weil du besoffen nicht Erika vor der Synagoge in der Sillgasse gröhlst, aber lass das. Lassenberger!",-14,2024-04-12 03:05:53,0,FPÖ,Innsbruck,Tirol,Lassenberger Name vielleicht ersten Blick zuordnen gemtlichen Spaziergang Stadt Innsbruck momentan Sicherheit ber laufen Tja mae einfach mal behaupten meisten Mitglieder Reddit FP Kandidaten allzu anfangen knnen Fr fr gilt gibts lesen Untenstehende entweder glauben Beachtung schenken Fr interessante Information persnlich gut bekannte Person mei Muata Person gleiche Klasse besucht wurde Person laut Aussage stark gemobbt Generell scheint Herr Lassenberger ungemtlicheren Personen Schule wurde Schlgen Anspucken berichtet Herren zurckzufhren Macht Info wollt nurmal teilen bitte falls jemand Erfahrungen Herrn erlebt bitte gebt Kommentar darauf freundlichen Gren Anonym,htte besser Lassenberger Verstehe di Trotzdemberger whlen mache lieber Kreuzerl Andersberger Ernst ntzt Post schadest maximal Mei Mamaaa hooooz gsoooogt mui mui mui einfach erbrmlich quellenlose FP tief absolut daneben holst genau Posten runter blauen korrupten faschistischen antisemitischen antidemokratischen Hanswrste sitzen irgendwo immer besser besoffen Erika Synagoge Sillgasse grhlst lass Lassenberger,NEGATIVE,0.8738517761230469,0.12614822387695312
+cautiousLollies9,1c1vxm5,Lassenberger,"Lassenberger. Ein Name, den man vielleicht nicht auf den ersten Blick zuordnen kann, dem man aber bei einem gemütlichen Spaziergang durch die Stadt Innsbruck momentan mit Sicherheit über den Weg laufen wird. 
+Tja, ich maße mir jetzt einfach mal an zu behaupten, dass die meisten Mitglieder auf diesem Reddit mit der FPÖ und damit auch mit jenem Kandidaten nicht allzu viel anfangen können.
+Für jene für die das nicht gilt, gibts hier nichts zu lesen, denn die werden das Untenstehende entweder nicht glauben oder ihm keine Beachtung schenken.
+
+Für die anderen habe ich eine interessante Information. Eine mir persönlich sehr gut bekannte Person (mei Muata) hat mit jener Person die gleiche Klasse besucht und wurde von dieser Person, laut ihrer Aussage, stark gemobbt. Generell scheint Herr Lassenberger eine der ungemütlicheren Personen auf der Schule gewesen zu sein. Mir wurde von Schlägen bis Anspucken berichtet, das auf diesen Herren zurückzuführen ist.
+Macht mit der Info was ihr wollt, wollte das nurmal hier teilen. Und bitte, falls jemand anderer noch solche Erfahrungen mit dem Herrn erlebt hat, bitte gebt mir ein Kommentar darauf.
+
+Mit freundlichen Grüßen,
+Anonym",2024-04-12 00:59:35,FPÖ,Landerun,kz79ohj,t1_kz7600n,"Bin ich voll und ganz bei dir.
+Wie gesagt, das Ziel des Posts ist es nicht, irgendwen umzustimmen. Wie schon geschrieben, Leute die die FPÖ wählen werden sich natürlich nicht von dem Post beeinflussen lassen, ist wie du schon gesagt hast Blödsinn, gibt ja auch keine Garantie dafür dass ich die Wahrheit sage.
+Deswegen die Kategorie Schimpfen statt Politik. Gibt eigentlich kein größeres Ziel hinter dem Post außer vielleicht noch andere zu finden, die ne Story mit dem Typen haben.
+Verstehe aber voll und ganz die Kritik, hätte ich vielleicht klarer kommunizieren sollen.",-3,2024-04-12 07:29:23,1,FPÖ,Innsbruck,Tirol,Lassenberger Name vielleicht ersten Blick zuordnen gemtlichen Spaziergang Stadt Innsbruck momentan Sicherheit ber laufen Tja mae einfach mal behaupten meisten Mitglieder Reddit FP Kandidaten allzu anfangen knnen Fr fr gilt gibts lesen Untenstehende entweder glauben Beachtung schenken Fr interessante Information persnlich gut bekannte Person mei Muata Person gleiche Klasse besucht wurde Person laut Aussage stark gemobbt Generell scheint Herr Lassenberger ungemtlicheren Personen Schule wurde Schlgen Anspucken berichtet Herren zurckzufhren Macht Info wollt nurmal teilen bitte falls jemand Erfahrungen Herrn erlebt bitte gebt Kommentar darauf freundlichen Gren Anonym,voll ganz gesagt Ziel Posts irgendwen umzustimmen schon geschrieben Leute FP whlen natrlich Post beeinflussen lassen schon gesagt hast Bldsinn gibt ja Garantie dafr Wahrheit sage Deswegen Kategorie Schimpfen statt Politik Gibt eigentlich greres Ziel Post auer vielleicht finden ne Story Typen Verstehe voll ganz Kritik htte vielleicht klarer kommunizieren sollen,NEGATIVE,0.9504608511924744,0.049539148807525635
+cautiousLollies9,1c1vxm5,Lassenberger,"Lassenberger. Ein Name, den man vielleicht nicht auf den ersten Blick zuordnen kann, dem man aber bei einem gemütlichen Spaziergang durch die Stadt Innsbruck momentan mit Sicherheit über den Weg laufen wird. 
+Tja, ich maße mir jetzt einfach mal an zu behaupten, dass die meisten Mitglieder auf diesem Reddit mit der FPÖ und damit auch mit jenem Kandidaten nicht allzu viel anfangen können.
+Für jene für die das nicht gilt, gibts hier nichts zu lesen, denn die werden das Untenstehende entweder nicht glauben oder ihm keine Beachtung schenken.
+
+Für die anderen habe ich eine interessante Information. Eine mir persönlich sehr gut bekannte Person (mei Muata) hat mit jener Person die gleiche Klasse besucht und wurde von dieser Person, laut ihrer Aussage, stark gemobbt. Generell scheint Herr Lassenberger eine der ungemütlicheren Personen auf der Schule gewesen zu sein. Mir wurde von Schlägen bis Anspucken berichtet, das auf diesen Herren zurückzuführen ist.
+Macht mit der Info was ihr wollt, wollte das nurmal hier teilen. Und bitte, falls jemand anderer noch solche Erfahrungen mit dem Herrn erlebt hat, bitte gebt mir ein Kommentar darauf.
+
+Mit freundlichen Grüßen,
+Anonym",2024-04-12 00:59:35,FPÖ,UnknownProphetX,kz74lq3,t1_kz73win,Was? Mein dad is ausländerfeindlich und bei der FPÖ…,3,2024-04-12 06:30:56,0,FPÖ,Innsbruck,Tirol,Lassenberger Name vielleicht ersten Blick zuordnen gemtlichen Spaziergang Stadt Innsbruck momentan Sicherheit ber laufen Tja mae einfach mal behaupten meisten Mitglieder Reddit FP Kandidaten allzu anfangen knnen Fr fr gilt gibts lesen Untenstehende entweder glauben Beachtung schenken Fr interessante Information persnlich gut bekannte Person mei Muata Person gleiche Klasse besucht wurde Person laut Aussage stark gemobbt Generell scheint Herr Lassenberger ungemtlicheren Personen Schule wurde Schlgen Anspucken berichtet Herren zurckzufhren Macht Info wollt nurmal teilen bitte falls jemand Erfahrungen Herrn erlebt bitte gebt Kommentar darauf freundlichen Gren Anonym,dad is auslnderfeindlich FP,NEGATIVE,0.8307061791419983,0.1692938208580017
+soreOcelot4,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
 
 |Liste|Wahlkampfkosten|Stimmen - Mandate - Prozent|Ausgaben/Stimme|Ausgaben/Mandat|
 |:-|:-|:-|:-|:-|
@@ -169,8 +494,62 @@ Honorable Mentions (4% Hürde nicht erreicht):
 |EINIG Innsbruck|40.000€|406    - 0,68%|98,52€|
 |TUN|3.000€|204    - 0,34%|14,71€|
 
-Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,FPÖ,Candid_Interview_268,kzwr8nw,t3_1c5qulz,"Wie hat es die KPÖ dann diesmal geschafft, mit so geringem Budget, dennoch so präsent zu sein? Ich habe gefühlt zehn mal so viele Plakatständer von denen gesehen wie z.B. von der FPÖ, v.a. auch an wirklich prominenten Orten (Uni, Sillpark,...).",4,2024-04-16 23:42:51,2,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.13743318617343903]","['negative', 0.059330299496650696]","['neutral', 0.8032364845275879]",neutral
-ygoldberg,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
+Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,FPÖ,Candid_Interview_268,kzwr8nw,t3_1c5qulz,"Wie hat es die KPÖ dann diesmal geschafft, mit so geringem Budget, dennoch so präsent zu sein? Ich habe gefühlt zehn mal so viele Plakatständer von denen gesehen wie z.B. von der FPÖ, v.a. auch an wirklich prominenten Orten (Uni, Sillpark,...).",4,2024-04-16 23:42:51,2,FPÖ,Innsbruck,Tirol,xB ListeWahlkampfkostenStimmen Mandate ProzentAusgabenStimmeAusgabenMandat TurskyVP Liste Fritz Grne SP FP JA Anzengruber Alternative Liste KP xB Honorable Mentions Hrde erreicht ListeWahlkampfkostenStimmen ProzentAusgabenStimme NEOS Gerechtes Innsbruck Unabhngigen Innsbruck TUN Quelle gerechnet Rechenfehler ausgebessert httpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungenahttpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungena,KP diesmal geschafft geringem Budget dennoch prsent gefhlt zehn mal viele Plakatstnder denen gesehen zB FP va wirklich prominenten Orten Uni Sillpark,NEGATIVE,0.6302207708358765,0.36977922916412354
+soreOcelot4,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
+
+|Liste|Wahlkampfkosten|Stimmen - Mandate - Prozent|Ausgaben/Stimme|Ausgaben/Mandat|
+|:-|:-|:-|:-|:-|
+|Tursky/ÖVP|690.000€|6.073  -  4 - 10,15%|113,62€| 172.000€|
+|Liste Fritz|200.000€|3.291  -  2 - 5,50%|60,77€| 100.000€ |
+|Grüne|450.000€|11.286 - 8 - 18,87%|39,87€| 56.250€|
+|SPÖ|280.000€|8.122  -  6 - 13,58%|34,47€| 46.667€|
+|FPÖ|300.000€|9.096  -  7 - 15,21%|32,98€| 42.857€ |
+|JA - Anzengruber|250.000€|10.067 - 8 - 16,83%|24,83€| 31.250€|
+|Alternative Liste|37.000€|2.889  -  2 - 4,83%|12,81€| 18.500€ |
+|KPÖ|20.000€|4.020  -  3 - 6,72%|4,98€| 6.667€ |
+
+&#x200B;
+
+Honorable Mentions (4% Hürde nicht erreicht):
+
+|Liste|Wahlkampfkosten|Stimmen - Prozent|Ausgaben/Stimme|
+|:-|:-|:-|:-|
+|NEOS|47.500€|2.102 - 3,51%|22,60€|
+|Gerechtes Innsbruck|15.000€|2.081 - 3,48%|7,21€|
+|DU - Die Unabhängigen|20.000€|177    - 0,30%|112,99€|
+|EINIG Innsbruck|40.000€|406    - 0,68%|98,52€|
+|TUN|3.000€|204    - 0,34%|14,71€|
+
+Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,FPÖ,FeatheryRobin,kzwzgej,t1_kzwr8nw,"Die KPÖ hatte vergleichsweise recht wenige Aufsteller. Ja, an gewissen Orten forciert, wo sie auch die Wähler vermuteten. Sie hatten auch nur bescheidene Papp-Banner, primär um Bäume herum.
+
+Die FPÖ hat die ganzen Autobahnauffahrten, Bundesstraßen und Hauptverkehrsstraßen vom Berufsverkehr in und um Innsbruck zugekleistert. Frecherweise wurden dann zum Wahltag auch noch (zumindest um meinem Sprengel) KPÖ Plakate runtergerissen und mit FPÖ, SPÖ und ÖVP Plakaten überklebt.",7,2024-04-17 00:35:27,0,FPÖ,Innsbruck,Tirol,xB ListeWahlkampfkostenStimmen Mandate ProzentAusgabenStimmeAusgabenMandat TurskyVP Liste Fritz Grne SP FP JA Anzengruber Alternative Liste KP xB Honorable Mentions Hrde erreicht ListeWahlkampfkostenStimmen ProzentAusgabenStimme NEOS Gerechtes Innsbruck Unabhngigen Innsbruck TUN Quelle gerechnet Rechenfehler ausgebessert httpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungenahttpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungena,KP vergleichsweise recht wenige Aufsteller Ja gewissen Orten forciert Whler vermuteten bescheidene PappBanner primr Bume herum FP ganzen Autobahnauffahrten Bundesstraen Hauptverkehrsstraen Berufsverkehr Innsbruck zugekleistert Frecherweise wurden Wahltag zumindest Sprengel KP Plakate runtergerissen FP SP VP Plakaten berklebt,NEUTRAL,0.6411485075950623,1.3588514924049377
+soreOcelot4,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
+
+|Liste|Wahlkampfkosten|Stimmen - Mandate - Prozent|Ausgaben/Stimme|Ausgaben/Mandat|
+|:-|:-|:-|:-|:-|
+|Tursky/ÖVP|690.000€|6.073  -  4 - 10,15%|113,62€| 172.000€|
+|Liste Fritz|200.000€|3.291  -  2 - 5,50%|60,77€| 100.000€ |
+|Grüne|450.000€|11.286 - 8 - 18,87%|39,87€| 56.250€|
+|SPÖ|280.000€|8.122  -  6 - 13,58%|34,47€| 46.667€|
+|FPÖ|300.000€|9.096  -  7 - 15,21%|32,98€| 42.857€ |
+|JA - Anzengruber|250.000€|10.067 - 8 - 16,83%|24,83€| 31.250€|
+|Alternative Liste|37.000€|2.889  -  2 - 4,83%|12,81€| 18.500€ |
+|KPÖ|20.000€|4.020  -  3 - 6,72%|4,98€| 6.667€ |
+
+&#x200B;
+
+Honorable Mentions (4% Hürde nicht erreicht):
+
+|Liste|Wahlkampfkosten|Stimmen - Prozent|Ausgaben/Stimme|
+|:-|:-|:-|:-|
+|NEOS|47.500€|2.102 - 3,51%|22,60€|
+|Gerechtes Innsbruck|15.000€|2.081 - 3,48%|7,21€|
+|DU - Die Unabhängigen|20.000€|177    - 0,30%|112,99€|
+|EINIG Innsbruck|40.000€|406    - 0,68%|98,52€|
+|TUN|3.000€|204    - 0,34%|14,71€|
+
+Quelle (etwas weiter gerechnet und Rechenfehler ausgebessert): [https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen\_a6638190](https://www.meinbezirk.at/innsbruck/c-politik/ueber-teure-mandate-neue-gemeinderaete-und-ueberraschungen_a6638190)",2024-04-16 20:45:44,FPÖ,ygoldberg,kzygdji,t1_kzy34cd,"Ich weiß, dass zB. die Wahlinfos/Werbung der FPÖ in der Post von bezahlten arbeitskräften verteilt wurden. Die KPÖ hat insgesamt weit über 100.000 Zeitungen und Flyer von ehrenamtlichen verteilen lassen",6,2024-04-17 07:59:23,1,FPÖ,Innsbruck,Tirol,xB ListeWahlkampfkostenStimmen Mandate ProzentAusgabenStimmeAusgabenMandat TurskyVP Liste Fritz Grne SP FP JA Anzengruber Alternative Liste KP xB Honorable Mentions Hrde erreicht ListeWahlkampfkostenStimmen ProzentAusgabenStimme NEOS Gerechtes Innsbruck Unabhngigen Innsbruck TUN Quelle gerechnet Rechenfehler ausgebessert httpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungenahttpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungena,wei zB WahlinfosWerbung FP Post bezahlten arbeitskrften verteilt wurden KP insgesamt weit ber Zeitungen Flyer ehrenamtlichen verteilen lassen,NEUTRAL,0.9997017979621887,1.0002982020378113
+soreOcelot4,1c5qulz,Wahlkampfausgaben Innsbrucker Gemeinderatswahl 2024 im Vergleich,"&#x200B;
 
 |Liste|Wahlkampfkosten|Stimmen - Mandate - Prozent|Ausgaben/Stimme|Ausgaben/Mandat|
 |:-|:-|:-|:-|:-|
@@ -201,8 +580,8 @@ Wenn du denkst dass du 100 000 Zeitungen und Flyer und zusätzlich noch all die 
 
 Dass eine Partei wie die FPÖ die eigentlich für Politik für die Menschen bei den Menschen stehen will nicht in der Lage ist dies ehrenamtlich zu erledigen zeigt auch mehr auf einen Mangel bei diesen hin, wenn nicht schon fast ein bisschen Arroganz, wenn man sich zu Schade sein scheint um unter die Leute zu gehen, da man das ja eh von der Parteifinanzierung zahlen kann, anstatt übrig gebliebenes zu Spenden.
 
-Mein Punkt ist lediglich jener, dass du mit deiner Aussage des Geheimtricks, den Arbeitsaufwand und die unter anderem gute Seite der KPÖ schlecht redest und irreführend darstellst dass andere Parteien nicht auf dies Ressource zurückgreifen, anstatt den effektiven Wahlkampf der Partei anzuerkennen.",2,2024-04-17 15:14:45,2,FPÖ,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.01538088172674179]","['negative', 0.05104497820138931]","['neutral', 0.9335741400718689]",neutral
-_Japosus_,p2z8yn,Grüne wollen Innsbruck autofrei machen,"[Artikel ORF](https://tirol.orf.at/stories/3116634/)
+Mein Punkt ist lediglich jener, dass du mit deiner Aussage des Geheimtricks, den Arbeitsaufwand und die unter anderem gute Seite der KPÖ schlecht redest und irreführend darstellst dass andere Parteien nicht auf dies Ressource zurückgreifen, anstatt den effektiven Wahlkampf der Partei anzuerkennen.",2,2024-04-17 15:14:45,2,FPÖ,Innsbruck,Tirol,xB ListeWahlkampfkostenStimmen Mandate ProzentAusgabenStimmeAusgabenMandat TurskyVP Liste Fritz Grne SP FP JA Anzengruber Alternative Liste KP xB Honorable Mentions Hrde erreicht ListeWahlkampfkostenStimmen ProzentAusgabenStimme NEOS Gerechtes Innsbruck Unabhngigen Innsbruck TUN Quelle gerechnet Rechenfehler ausgebessert httpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungenahttpswwwmeinbezirkatinnsbruckcpolitikueberteuremandateneuegemeinderaeteundueberraschungena,Funktionre Parteien herumgehen Frhstck verschenken Feuerzeug Hand drcken hnliches ehrenamtlich funktioniert oft System politischem Engagement Parteien KP Speziall Fall bzw Geheimtrick anwendet denkst Zeitungen Flyer zustzlich all Plakate Budget angeblich zusammenstellen kannst find naiv deutlich geringeren kosten erklren Partei FP eigentlich fr Politik fr Menschen Menschen stehen Lage ehrenamtlich erledigen zeigt mehr Mangel schon fast bisschen Arroganz Schade scheint Leute gehen ja eh Parteifinanzierung zahlen anstatt brig gebliebenes Spenden Punkt lediglich Aussage Geheimtricks Arbeitsaufwand gute Seite KP schlecht redest irrefhrend darstellst Parteien Ressource zurckgreifen anstatt effektiven Wahlkampf Partei anzuerkennen,NEGATIVE,0.7085085511207581,0.29149144887924194
+artisticLollies2,p2z8yn,Grüne wollen Innsbruck autofrei machen,"[Artikel ORF](https://tirol.orf.at/stories/3116634/)
 
 ***Die Innsbrucker Innenstadt soll autofrei werden. Die Innsbrucker Grünen haben dazu eine Machbarkeitsstudie in Auftrag gegeben, die am Donnerstag präsentiert wurde. Das Vorhaben sei umsetzbar, hieß es, allerdings mit großräumigen Umgestaltungen.***
 
@@ -210,9 +589,9 @@ _Japosus_,p2z8yn,Grüne wollen Innsbruck autofrei machen,"[Artikel ORF](https://
 
 [Übersichtsplan](https://oekastatic.orf.at/mims/2021/33/13/crops/w=1280,q=70,r=1/1045444_bigpicture_369713_innenstadt1.jpg?s=0c128ba55454d21e1b6d487a64a0599d3f1f9661)",2021-08-12 12:54:48,Grüne,Memeboiiiiiiiius69,h8q44zs,t3_p2z8yn,"Da hams an Schaß erzählt.
 Autofrei heißt dann Touristenbusse san no ultra chillig, oder a jeder mit am Ticket für ""Touristen oder gstopdt sein"".
-Lasst eich kan Scheiß über Tirol erzählen, grad nit vo die mehr als türkis angehauchten pseudo Grünen ausm Westen",-2,2021-08-13 00:38:38,0,Grüne,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.005144188180565834]","['negative', 0.03821427375078201]","['neutral', 0.9566415548324585]",neutral
-minasmask,1b774cq,shocked pikachu face,,2024-03-05 14:55:34,Grüne,h-i-j-k-elemenopee,kthrf7o,t3_1b774cq,"Najo, die Grünen sein hald a nix anders als neoliberale hardliner Kapitalisten. Der anzige Unterschied zu NEOS und ÖVP ist hald des Bäume umarmen (weil echter Umweltschutz is des jo a ned, wenn ma uns ehrlich san, liebe Grüße an den Bozner Platz (haßt bei mir hiatz Betonzner Platz, wenn a fertig is))",-13,2024-03-05 19:03:26,2,Grüne,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.01432210672646761]","['negative', 0.08918218314647675]","['neutral', 0.8964956998825073]",neutral
-minasmask,1b774cq,shocked pikachu face,,2024-03-05 14:55:34,Grüne,Sheeprevenge,kth6qjo,t1_kth1g4a,"Is lesbar mit der [Bypass Paywalls Clean Extension](https://gitlab.com/magnolia1234) für Firefox und Chrome. Verwend Firefox sowohl am PC als auch am Handy damit und kann so ziemlich alles lesen (+uBlock Origin für keine Werbung).
+Lasst eich kan Scheiß über Tirol erzählen, grad nit vo die mehr als türkis angehauchten pseudo Grünen ausm Westen",-2,2021-08-13 00:38:38,0,Grüne,Innsbruck,Tirol,Artikel ORFhttpstirolorfatstories Innsbrucker Innenstadt autofrei Innsbrucker Grnen Machbarkeitsstudie Auftrag gegeben Donnerstag prsentiert wurde Vorhaben sei umsetzbar hie allerdings grorumigen Umgestaltungen xB bersichtsplanhttpsoekastaticorfatmimscropswqrbigpictureinnenstadtjpgscbadebdaadff,hams Scha erzhlt Autofrei heit Touristenbusse san no ultra chillig a Ticket fr Touristen gstopdt Lasst eich kan Schei ber Tirol erzhlen grad nit vo mehr trkis angehauchten pseudo Grnen ausm Westen,NEGATIVE,0.7169114351272583,0.2830885648727417
+enragedFerret7,1b774cq,shocked pikachu face,,2024-03-05 14:55:34,Grüne,h-i-j-k-elemenopee,kthrf7o,t3_1b774cq,"Najo, die Grünen sein hald a nix anders als neoliberale hardliner Kapitalisten. Der anzige Unterschied zu NEOS und ÖVP ist hald des Bäume umarmen (weil echter Umweltschutz is des jo a ned, wenn ma uns ehrlich san, liebe Grüße an den Bozner Platz (haßt bei mir hiatz Betonzner Platz, wenn a fertig is))",-13,2024-03-05 19:03:26,2,Grüne,Innsbruck,Tirol,,Najo Grnen hald a nix neoliberale hardliner Kapitalisten anzige Unterschied NEOS VP hald Bume umarmen echter Umweltschutz is jo a ned ma ehrlich san liebe Gre Bozner Platz hiatz Betonzner Platz a fertig is,NEGATIVE,0.8813520073890686,0.1186479926109314
+enragedFerret7,1b774cq,shocked pikachu face,,2024-03-05 14:55:34,Grüne,Sheeprevenge,kth6qjo,t1_kth1g4a,"Is lesbar mit der [Bypass Paywalls Clean Extension](https://gitlab.com/magnolia1234) für Firefox und Chrome. Verwend Firefox sowohl am PC als auch am Handy damit und kann so ziemlich alles lesen (+uBlock Origin für keine Werbung).
 
 >Bis Ende April haben Innsbrucker Wohnungseigentümer Zeit, rückwirkend für das letzte Jahr leerstehende Objekte zu melden. Nur 23 Personen haben das bisher gemacht. Für Bürgermeister Georg Willi (Grüne) ist das primäre Ziel nicht die Einhebung der Abgabe – vielmehr wolle man Besitzer motivieren, Wohnungen auf den Markt zu bringen.
 
@@ -230,12 +609,14 @@ BM Georg Willi hofft, dass künftig eine höhere Leerstandsabgabe möglich wird,
 
 >Willi begrüßt zugleich die Absicht der Bundesregierung, den Ländern künftig höhere Leerstandsabgaben zu ermöglichen. In Innsbruck sind aktuell etwa für eine 80-Quadratmeter-Wohnung bis zu 1680 Euro pro Jahr fällig. Willi stellt sich das Zwei- bis Dreifache vor. Die Abgabenhöhe solle durchaus ""zwicken"", um so auch spekulativem Leerstand zu begegnen.
 
->Da der Brief an alle Haushalte ergehen musste, wurde ihm übrigens auch gleich noch ein Infofolder über die ""EnergiePlus""-Förderung bei Wohnungssanierungen beigelegt. Zugleich werde die Bevölkerung so nun breit über die Abgabe informiert – und darüber, dass Wohnungsleerstand ""gesellschaftlich nicht gewollt"" sei, sagt Willi. Er hofft, dass das Schreiben hier ""in den Köpfen etwas verändert"".",23,2024-03-05 17:10:07,1,Grüne,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.20429065823554993]","['negative', 0.29302406311035156]","['neutral', 0.5026853084564209]",neutral
-Accurate-Branch4767,1c634i9,Was kostet eine Wählerstimme in Innsbruck?,"Quellen: 
+>Da der Brief an alle Haushalte ergehen musste, wurde ihm übrigens auch gleich noch ein Infofolder über die ""EnergiePlus""-Förderung bei Wohnungssanierungen beigelegt. Zugleich werde die Bevölkerung so nun breit über die Abgabe informiert – und darüber, dass Wohnungsleerstand ""gesellschaftlich nicht gewollt"" sei, sagt Willi. Er hofft, dass das Schreiben hier ""in den Köpfen etwas verändert"".",23,2024-03-05 17:10:07,1,Grüne,Innsbruck,Tirol,,Is lesbar Bypass Paywalls Clean Extensionhttpsgitlabcommagnolia fr Firefox Chrome Verwend Firefox sowohl PC Handy ziemlich lesen uBlock Origin fr Werbung Ende April Innsbrucker Wohnungseigentmer Zeit rckwirkend fr letzte Jahr leerstehende Objekte melden Personen bisher gemacht Fr Brgermeister Georg Willi Grne primre Ziel Einhebung Abgabe vielmehr wolle Besitzer motivieren Wohnungen Markt bringen Innsbruck Seit Jnner Tirol Leerstandsabgabe Kraft April mssen rckwirkend fr Jahr Objekte gemeldet seit ber sechs Monaten leerstehen Dabei gibt Reihe Ausnahmetatbestnden etwa Eigentmer Wohnung gesundheits altersbedingt mehr Hauptwohnsitz ntzen knnen zeitnaher Eigenbedarf besteht handelt sogenannte Selbstbemessungsabgabe Abgabenpflichtige Meldung Gemeinde Innsbruck fr dato gerade Personen getan Dabei geht Leerstandserhebung mittlerweile ber Wohnungen Innsbruck analysiert hervor ber Wohnungen Landeshauptstadt leerstehen Summe drften Brief Haushalte Tage ergeht smtliche Haushalte Innsbruck Brief ber Pflicht Leerstandsabgabe informiert sei erstes Ziel einzuheben betont BM Georg Willi Grne Botschaft Haus Wohnungseingentmer laute vielmehr Zahlt Abgabe bringt Wohnung Markt Daher Schreiben Initiative Sicheres Vermieten Tiroler Landesregierung verwiesen konkrete Hilfestellung Entlastung Vermietung leerstehenden Wohnung bieten BM Georg Willi hofft knftig hhere Leerstandsabgabe mglich dadurch wirklich Wohnungen Markt bekommen Gezielt Eigentmer leerstehender Wohnungen anzuschreiben sei Datenschutzgrnden derzeit mglich bedauert Willi Gebude Wohnungsregister Zentralem Melderegister abgeglichen darf sog Registerabfrage Problem stehen Kommunen Behrden mgliche Konsequenzen angeht falls vorgeschriebene Selbstmeldung macht Wohnungsbesitzer aktiv herauszufiltern Leerstand aufweisen Abgabe zahlen datenschutzrechtlich mglich Ansonsten drfe Anfangsverdacht ttig etwa Meldung Baupolizei Nachbarn rumt Willi appelliert daher Landesregierung gesetzliche Grundlagen fr Registerabfrage schaffen Liste Fritz zuletzt kritisiert Willi begrt zugleich Absicht Bundesregierung Lndern knftig hhere Leerstandsabgaben ermglichen Innsbruck aktuell etwa fr QuadratmeterWohnung Euro pro Jahr fllig Willi stellt Zwei Dreifache Abgabenhhe solle durchaus zwicken spekulativem Leerstand begegnen Brief Haushalte ergehen wurde brigens gleich Infofolder ber EnergiePlusFrderung Wohnungssanierungen beigelegt Zugleich Bevlkerung breit ber Abgabe informiert darber Wohnungsleerstand gesellschaftlich gewollt sei sagt Willi hofft Schreiben Kpfen verndert,NEUTRAL,0.9956210255622864,1.0043789744377136
+enragedFerret7,1b774cq,shocked pikachu face,,2024-03-05 14:55:34,Grüne,userrr3,kthxmjt,t1_kthrf7o,"Wenn man den Artikel lesen würde könnt man draufkommen, dass auf Landesebene die Möglichkeit geschaffen werden muss konsequenzen für die Leute zu ziehen die sich nicht selbst melden. Da sind die schwarzen einfach zu stark. Überhaupt hatten die grünen nie eine absolute Mehrheit und mit den ganzen övp und fpö listen spielt sich das schonmal nicht",8,2024-03-05 19:37:45,0,Grüne,Innsbruck,Tirol,,Artikel lesen wrde knnt draufkommen Landesebene Mglichkeit geschaffen konsequenzen fr Leute ziehen melden schwarzen einfach stark berhaupt grnen nie absolute Mehrheit ganzen vp fp listen spielt schonmal,NEGATIVE,0.9471819400787354,0.05281805992126465
+enragedFerret7,1b774cq,shocked pikachu face,,2024-03-05 14:55:34,Grüne,Extra_Opportunity_76,kthw722,t1_kthrf7o,"Die Grünen sind Vollpfosten. Ich habe sie noch nie gewählt und werde ich auch nie. Ich hoffe, sie fliegen bei den diesjährigen Nationalratswahlen raus. Unsere Politiker sind generell unfähig. Sie scheren sich einen Furz um die Bevölkerung. Das Einzige, was sie wollen, ist ein guter Posten, Steuergelder kassieren, Freunderlwirtschaft, Korruption und Steuerbetrug.",-6,2024-03-05 19:29:52,3,Grüne,Innsbruck,Tirol,,Grnen Vollpfosten nie gewhlt nie hoffe fliegen diesjhrigen Nationalratswahlen raus Politiker generell unfhig scheren Furz Bevlkerung Einzige guter Posten Steuergelder kassieren Freunderlwirtschaft Korruption Steuerbetrug,NEGATIVE,0.9929285645484924,0.007071435451507568
+wakefulMussel2,1c634i9,Was kostet eine Wählerstimme in Innsbruck?,"Quellen: 
 https://www.reddit.com/r/Innsbruck/s/HTyhT5xFMS
 
-https://wahlen.tirol.gv.at/gemeinderats_und_buergermeisterwahl_der_landeshauptstadt_innsbruck_2024/gemeinden/innsbruck.html",2024-04-17 06:44:17,Neos,userrr3,kzydd3j,t1_kzybvbb,die neoliberalen Neos mit 22€ doch halbwegs günstig im Vgl mit den andern,11,2024-04-17 07:21:44,1,Neos,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.00038151079206727445]","['negative', 0.0011919683311134577]","['neutral', 0.9984265565872192]",neutral
-Accurate-Branch4767,1c634i9,Was kostet eine Wählerstimme in Innsbruck?,"Quellen: 
+https://wahlen.tirol.gv.at/gemeinderats_und_buergermeisterwahl_der_landeshauptstadt_innsbruck_2024/gemeinden/innsbruck.html",2024-04-17 06:44:17,Neos,userrr3,kzydd3j,t1_kzybvbb,die neoliberalen Neos mit 22€ doch halbwegs günstig im Vgl mit den andern,11,2024-04-17 07:21:44,1,Neos,Innsbruck,Tirol,Quellen httpswwwredditcomrInnsbrucksHTyhTxFMS httpswahlentirolgvatgemeinderatsundbuergermeisterwahlderlandeshauptstadtinnsbruckgemeindeninnsbruckhtml,neoliberalen Neos halbwegs gnstig Vgl,NEGATIVE,0.8823412656784058,0.11765873432159424
+wakefulMussel2,1c634i9,Was kostet eine Wählerstimme in Innsbruck?,"Quellen: 
 https://www.reddit.com/r/Innsbruck/s/HTyhT5xFMS
 
-https://wahlen.tirol.gv.at/gemeinderats_und_buergermeisterwahl_der_landeshauptstadt_innsbruck_2024/gemeinden/innsbruck.html",2024-04-17 06:44:17,Neos,SiebenZwerg,kzyeh1u,t1_kzydd3j,Ich würde die NEOS als liberal aber nicht als neoliberal einstufen im Gegenzug zur ÖVP.,2,2024-04-17 07:35:21,2,Neos,Innsbruck,NEUTRAL,0.5,1.5,"['positive', 0.008878998458385468]","['negative', 0.019713785499334335]","['neutral', 0.9714071750640869]",neutral
+https://wahlen.tirol.gv.at/gemeinderats_und_buergermeisterwahl_der_landeshauptstadt_innsbruck_2024/gemeinden/innsbruck.html",2024-04-17 06:44:17,Neos,SiebenZwerg,kzyeh1u,t1_kzydd3j,Ich würde die NEOS als liberal aber nicht als neoliberal einstufen im Gegenzug zur ÖVP.,2,2024-04-17 07:35:21,2,Neos,Innsbruck,Tirol,Quellen httpswwwredditcomrInnsbrucksHTyhTxFMS httpswahlentirolgvatgemeinderatsundbuergermeisterwahlderlandeshauptstadtinnsbruckgemeindeninnsbruckhtml,wrde NEOS liberal neoliberal einstufen Gegenzug VP,NEUTRAL,0.9708168506622314,1.0291831493377686
