@@ -85,6 +85,8 @@ markupsafe==2.1.5
     #   werkzeug
 nest-asyncio==1.6.0
     # via dash
+networkx==3.3
+    # via -r requirements.in
 nltk==3.8.1
     # via -r requirements.in
 numpy==1.26.4
