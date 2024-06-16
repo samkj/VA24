@@ -43,7 +43,14 @@ def classify_topic(text, topics):
         return None
 
 # Create a column for classified topics
-df['classified_topic'] = df['cleaned_comment_body'].apply(lambda x: classify_topic(x, topics) if pd.notnull(x) else None)
+df['classified_topic'] = None
+
+# Classify topics with progress indication
+for i, text in enumerate(df['cleaned_comment_body']):
+    if pd.notnull(text):
+        df.at[i, 'classified_topic'] = classify_topic(text, topics)
+    if i % 100 == 0:
+        print(f"Processed {i+1}/{len(df)} posts")
 
 # Debug: Print some classified topics
 print(df[['cleaned_comment_body', 'classified_topic']].head())
