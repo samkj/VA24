@@ -28,6 +28,10 @@ click-plugins==1.1.1
     # via fiona
 cligj==0.7.2
     # via fiona
+contourpy==1.2.1
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
 dash==2.17.0
     # via
     #   -r requirements.in
@@ -61,6 +65,8 @@ fiona==1.9.6
     # via geopandas
 flask==3.0.3
     # via dash
+fonttools==4.53.0
+    # via matplotlib
 fsspec==2024.6.0
     # via huggingface-hub
 geopandas==0.14.4
@@ -79,10 +85,14 @@ jinja2==3.1.4
     # via flask
 joblib==1.4.2
     # via nltk
+kiwisolver==1.4.5
+    # via matplotlib
 markupsafe==2.1.5
     # via
     #   jinja2
     #   werkzeug
+matplotlib==3.9.0
+    # via wordcloud
 nest-asyncio==1.6.0
     # via dash
 networkx==3.3
@@ -92,14 +102,18 @@ nltk==3.8.1
 numpy==1.26.4
     # via
     #   -r requirements.in
+    #   contourpy
     #   geopandas
+    #   matplotlib
     #   pandas
     #   shapely
     #   transformers
+    #   wordcloud
 packaging==24.0
     # via
     #   geopandas
     #   huggingface-hub
+    #   matplotlib
     #   plotly
     #   transformers
 pandas==2.2.2
@@ -108,6 +122,10 @@ pandas==2.2.2
     #   geopandas
 pathlib==1.0.1
     # via -r requirements.in
+pillow==10.3.0
+    # via
+    #   matplotlib
+    #   wordcloud
 plotly==5.22.0
     # via
     #   -r requirements.in
@@ -116,10 +134,14 @@ praw==7.7.1
     # via -r requirements.in
 prawcore==2.4.0
     # via praw
+pyparsing==3.1.2
+    # via matplotlib
 pyproj==3.6.1
     # via geopandas
 python-dateutil==2.9.0.post0
-    # via pandas
+    # via
+    #   matplotlib
+    #   pandas
 pytz==2024.1
     # via
     #   datetime
@@ -181,6 +203,8 @@ werkzeug==3.0.3
     # via
     #   dash
     #   flask
+wordcloud==1.9.3
+    # via -r requirements.in
 zipp==3.19.2
     # via importlib-metadata
 zope-interface==6.4.post2

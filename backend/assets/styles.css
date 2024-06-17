@@ -19,3 +19,16 @@ h1 {
 div {
     box-sizing: border-box;
 }
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    width: 75%;
+}
+
+.dropdown-container {
+    width: 20%;
+    margin-top: 20px;
+}
