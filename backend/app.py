@@ -90,11 +90,11 @@ def update_sentiment_piecharts(selected_states, start_date, end_date):
         return go.Figure()
 
     party_synonyms = {
-        'ÖVP': ['ÖVP', 'OEVP'],
-        'FPÖ': ['FPÖ', 'FPOE', 'Blaue', 'Blauen', 'Freiheitliche'],
-        'Grüne': ['Grüne', 'Gruene'],
-        'SPÖ': ['SPÖ', 'SPOE'],
-        'Neos': ['Neos']
+        'ÖVP': ['ÖVP', 'OEVP', 'Volkspartei', 'Schwarz', 'Schwarzen'],
+        'FPÖ': ['FPÖ', 'FPOE', 'Blaue', 'Blauen', 'Freiheitliche', 'Blau'],
+        'Grüne': ['Grüne', 'Gruene', 'Die Grünen'],
+        'SPÖ': ['SPÖ', 'SPOE', 'Sozialdemokratische Partei Österreichs', 'Sozialdemokraten', 'Roten', 'Rot'],
+        'Neos': ['Neos', 'NEOS', 'Neue Österreich', 'Liberales Forum', 'Pink', 'Pinken']
     }
     fig = make_subplots(
         rows=1, 
@@ -113,7 +113,12 @@ def update_sentiment_piecharts(selected_states, start_date, end_date):
         sentiments = [sentiments.get('NEGATIVE', 0), sentiments.get('NEUTRAL', 0), sentiments.get('POSITIVE', 0)]
 
         fig.add_trace(
-            go.Pie(labels=['Negative', 'Neutral', 'Positive'], values=sentiments, name=party),
+            go.Pie(
+                labels=['Negative', 'Neutral', 'Positive'], 
+                values=sentiments, 
+                name=party,
+                marker=dict(colors=['red', 'gray', 'green'])
+            ),
             row=1, col=i+1
         )
 
