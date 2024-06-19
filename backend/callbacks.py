@@ -1,5 +1,5 @@
 import pandas as pd
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 import plotly.express as px
 import json
 from wordcloud import WordCloud
@@ -7,7 +7,7 @@ import dash_bootstrap_components as dbc
 import dash_html_components as html
 import dash_core_components as dcc
 import plotly.graph_objects as go
-from services.data_service import load_sentiment_data, load_wordcloud_data
+from services.data_service import load_sentiment_data, load_wordcloud_data, query_sentiment_data
 
 
 def register_callbacks(app):
@@ -80,7 +80,7 @@ def register_callbacks(app):
         return fig
 
     @app.callback(
-        Output('sentiment-card', 'children'),
+        [Output('sentiment-card', 'children')],
         [Input('map', 'clickData'), Input('navbar-dropdown', 'value')]
     )
     def update_sentiment_graph(click_data, filter1):
@@ -88,19 +88,17 @@ def register_callbacks(app):
         state = click_data['points'][0]['location'] if click_data else None
         print("Filter1---state", filter1, state)
         sentiment_data = load_sentiment_data(state, filter1)
-        positive_percentage = sentiment_data[sentiment_data['BERT_label'] == 'Positive'].shape[0] / \
-                              sentiment_data.shape[0] * 100
-        negative_percentage = sentiment_data[sentiment_data['BERT_label'] == 'Negative'].shape[0] / \
-                              sentiment_data.shape[0] * 100
-        neutral_percentage = sentiment_data[sentiment_data['BERT_label'] == 'Neutral'].shape[0] / \
-                             sentiment_data.shape[0] * 100
-        print("Positive Percentage", positive_percentage)
-        print("Negative Percentage", negative_percentage)
-        print("Neutral Percentage", neutral_percentage)
+        print(sentiment_data.head(5))
+        # count the number of positive, negative and neutral sentiments and divide by the total number of sentiments
+        positive = sentiment_data[sentiment_data['BERT_class'] == 'POSITIVE'].shape[0] / sentiment_data.shape[0] * 100
+        negative = sentiment_data[sentiment_data['BERT_class'] == 'NEGATIVE'].shape[0] / sentiment_data.shape[0] * 100
+        neutral = sentiment_data[sentiment_data['BERT_class'] == 'NEUTRAL'].shape[0] / sentiment_data.shape[0] * 100
+        print("Positive", positive, "Negative", negative, "Neutral", neutral)
+        print("SUM", positive + negative + neutral)
 
         fig = go.Figure(
             go.Barpolar(
-                r=[45, 45, 10],
+                r=[positive, negative, neutral],
                 theta=['Positive', 'Negative', 'Neutral'],
                 marker_color=["#E4FF87", '#FFAA70', '#B6FFB4'],
                 marker_line_color="black",
@@ -116,24 +114,24 @@ def register_callbacks(app):
                 angularaxis=dict(showticklabels=True, ticks='', tickvals=['Positive', 'Negative', 'Neutral'], )
             )
         )
-        return dbc.Card([
+        card_content = dbc.Card([
             dbc.CardHeader(html.B("Sentiment Analysis")),
             dbc.CardBody([
-                # html.H5("Sentiment Percentage"),
                 dcc.Graph(figure=fig, id='sentiment-polar-chart'),
                 html.Hr(),
-                # Add slider from the begging of the year to the end of the year
                 html.H5("Select Date Range"),
                 dcc.Slider(
                     id='date-slider',
                     min=2019,
                     max=2023,
                     step=1,
-                    value=50,
-                    marks={i: f'{i}%' for i in range(0, 101, 10)}
+                    value=2020,
+                    marks={i: f'{i}%' for i in range(2019, 2024)}
                 )
             ])
         ])
+
+        return [card_content]
 
     @app.callback(
         Output('url', 'pathname'),
@@ -170,3 +168,31 @@ def register_callbacks(app):
         fig = px.imshow(wc, binary_string=True)
         fig.update_xaxes(showticklabels=False).update_yaxes(showticklabels=False)
         return fig
+
+    @app.callback(
+        [Output('sentiment-table', 'data'), Output('sentiment-table-container', 'style'), Output('store', 'data')],
+        [Input('sentiment-polar-chart', 'clickData')],
+        [State('store', 'data')]
+    )
+    def update_table(clickData, store_data):
+        # print("In update_table", clickData)
+        if clickData is None:
+            return [], {'display': 'none'}, None
+        print("Store Data", store_data)
+
+        # Extract the sentiment from the clicked data point
+        sentiment = clickData['points'][0][
+            'theta']  # replace 'label' with the key that holds the sentiment in your data
+        # print("Sentiment", sentiment)
+
+        if store_data and store_data['points'][0]['theta'] == sentiment:
+            return [], {'display': 'none'}, None
+
+        # Query your data source to get the list of data corresponding to the clicked sentiment
+        # This is a placeholder, replace with your actual query
+        data = query_sentiment_data(sentiment).head(15)
+
+        data = data.to_dict('records')
+        # print("Data", data)
+
+        return data, {'display': 'block'}, clickData

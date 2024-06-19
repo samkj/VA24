@@ -1,6 +1,7 @@
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 import dash_html_components as html
+import dash_table
 import plotly.express as px
 import pandas as pd
 import json
@@ -57,6 +58,39 @@ def create_layout() -> object:
         color="dark",
         dark=True,
     )
+    # Add a DataTable to the layout
+    datatable = dash_table.DataTable(
+        id='sentiment-table',
+        columns=[{'name': i, 'id': i} for i in ['author_name', 'title', 'comment_body', 'BERT_label', 'BERT_Compound']],
+        data=[
+            # {'author_name': '-', 'title': '-', 'comment_body': '-', 'BERT_label': '-', 'BERT_Compound': '-'},
+            # {'author_name': '-', 'title': '-', 'comment_body': '-', 'BERT_label': '-', 'BERT_Compound': '-'}
+        ],  # Add more sample rows if needed
+        style_table={'overflowX': 'auto'},  # Hide the table by default
+        style_header={
+            'backgroundColor': 'rgb(230, 230, 230)',
+            'fontWeight': 'bold'
+        },
+        style_cell={
+            'textAlign': 'left',
+            # 'padding': '15px',
+            'maxHeight': '500px',
+            'whiteSpace': 'no-wrap',
+            'overflow': 'hidden',
+            'textOverflow': 'ellipsis',
+        },
+        style_data={
+            'whiteSpace': 'normal',
+            'height': 'auto'
+        },
+        style_data_conditional=[
+            {
+                'if': {'row_index': 'odd'},
+                'backgroundColor': 'rgb(248, 248, 248)'
+            }
+        ]
+    )
+    store = dcc.Store(id='store')
 
     layout = html.Div([
         dcc.Location(id='url', refresh=False),
@@ -66,14 +100,17 @@ def create_layout() -> object:
             html.Div(id='map-wrapper', children=[
                 dcc.Graph(id='map', figure=fig)
             ]),
-            html.Div(id='sentiment-card'),
+            html.Div(id='sentiment-card'),  # sentiment polar chart placeholder
+            html.Div(id='sentiment-table-container', children=[
+                datatable
+            ]),
             dcc.Graph(id='wordcloud-graph'),
+            store,
             dcc.Interval(
                 id='interval-component',
                 interval=1 * 1000,  # in milliseconds
                 n_intervals=0
             )
-        ], style={'max-width': '1200px', 'margin': '0 auto'})  # Center the layout
+        ], style={'max-width': '1200px', 'margin': '0 auto'}),  # Center the layout
     ])
-
     return layout

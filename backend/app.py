@@ -5,7 +5,7 @@ from callbacks import register_callbacks
 
 
 external_stylesheets = [dbc.themes.SPACELAB]
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
 
 app.layout = create_layout()
 
