@@ -1,18 +1,10 @@
 import pandas as pd
 import networkx as nx
 import plotly.graph_objects as go
-import spacy
-from transformers import pipeline
 
-# Load the CSV data
-file_path = r'subreddits_datafiles\processed_datafiles_sentiment\sentiment_all_subreddits_data.csv'
+# Load the classified CSV data
+file_path = r'subreddits_datafiles\processed_datafiles_sentiment\classified_sentiment_all_subreddits_data.csv'
 df = pd.read_csv(file_path)
-
-# Load spaCy model
-nlp = spacy.load('en_core_web_sm')
-
-# Load topic classification model with increased timeout
-classifier = pipeline('zero-shot-classification', model='facebook/bart-large-mnli', device=0, timeout=600)
 
 # Define the political parties and their synonyms
 party_synonyms = {
@@ -32,28 +24,6 @@ G = nx.Graph()
 # Add nodes for each party
 for party in party_synonyms.keys():
     G.add_node(party)
-
-# Preprocess and classify posts
-def classify_topic(text, topics):
-    try:
-        result = classifier(text, topics)
-        return result['labels'][0]
-    except Exception as e:
-        print(f"Error classifying text: {e}")
-        return None
-
-# Create a column for classified topics
-df['classified_topic'] = None
-
-# Classify topics with progress indication
-for i, text in enumerate(df['cleaned_comment_body']):
-    if pd.notnull(text):
-        df.at[i, 'classified_topic'] = classify_topic(text, topics)
-    if i % 100 == 0:
-        print(f"Processed {i+1}/{len(df)} posts")
-
-# Debug: Print some classified topics
-print(df[['cleaned_comment_body', 'classified_topic']].head())
 
 # Process the data to add edges based on classified topic connections
 for topic in topics:
