@@ -7,53 +7,55 @@ df = pd.read_csv(file_path)
 
 # Define the political parties and their synonyms
 party_synonyms = {
-        'ÖVP': ['ÖVP', 'OEVP', 'Volkspartei', 'Schwarz', 'Schwarzen'],
-        'FPÖ': ['FPÖ', 'FPOE', 'Blaue', 'Blauen', 'Freiheitliche', 'Blau'],
-        'Grüne': ['Grüne', 'Gruene', 'Die Grünen'],
-        'SPÖ': ['SPÖ', 'SPOE', 'Sozialdemokratische Partei Österreichs', 'Sozialdemokraten', 'Roten', 'Rot'],
-        'Neos': ['Neos', 'NEOS', 'Neue Österreich', 'Liberales Forum', 'Pink', 'Pinken']
+    'ÖVP': ['ÖVP', 'OEVP', 'Volkspartei', 'Schwarz', 'Schwarzen'],
+    'FPÖ': ['FPÖ', 'FPOE', 'Blaue', 'Blauen', 'Freiheitliche', 'Blau'],
+    'Grüne': ['Grüne', 'Gruene', 'Die Grünen'],
+    'SPÖ': ['SPÖ', 'SPOE', 'Sozialdemokratische Partei Österreichs', 'Sozialdemokraten', 'Roten', 'Rot'],
+    'Neos': ['Neos', 'NEOS', 'Neue Österreich', 'Liberales Forum', 'Pink', 'Pinken']
 }
 
-# Define topics
-topics = ['climate', 'migration', 'economy', 'health', 'education']
+# Define topics and their corresponding colors
+topics = {
+    'climate': 'gray',
+    'migration': 'gray',
+    'economy': 'gray',
+    'health': 'gray',
+    'education': 'gray'
+}
 
-# Group by post_id and concatenate keywords
-df_grouped = df.groupby('post_id')['keyword'].apply(lambda x: ' '.join(x)).reset_index()
+# Define colors for parties
+party_colors = {
+    'ÖVP': 'black',
+    'FPÖ': 'blue',
+    'Grüne': 'green',
+    'SPÖ': 'red',
+    'Neos': 'pink'
+}
 
-# Process the data to create separate network graphs for each topic
-for topic in topics:
-    net = Network(height='750px', width='100%', notebook=True)
-    
-    # Add nodes for each party
-    for party in party_synonyms.keys():
-        net.add_node(party, label=party, title=f"Party: {party}")
-    
+# Create the network graph
+net = Network(height='750px', width='100%', notebook=True)
+
+# Add nodes for each topic with increased margin
+topic_x = -200
+topic_y = 0
+for topic, color in topics.items():
+    net.add_node(topic, label=topic, color=color, title=f"Topic: {topic}", x=topic_x, y=topic_y, fixed=True)
+    topic_x += 100  # Increase the margin between nodes
+
+# Add nodes for each party with increased margin
+party_x = -200
+party_y = -200
+for party, color in party_colors.items():
+    net.add_node(party, label=party, color=color, title=f"Party: {party}", x=party_x, y=party_y, fixed=True)
+    party_x += 100  # Increase the margin between nodes
+
+# Iterate through each topic and party to create edges based on co-occurrence
+for topic in topics.keys():
     topic_df = df[df['classified_topic'] == topic]
-    topic_grouped = topic_df.groupby('post_id')['keyword'].apply(lambda x: ' '.join(x)).reset_index()
-    
-    # Iterate through all pairs of parties to count co-occurrences
-    for party1 in party_synonyms.keys():
-        for party2 in party_synonyms.keys():
-            if party1 != party2:
-                count = 0
-                for post in topic_grouped.itertuples():
-                    keywords = post.keyword.split()
-                    if any(synonym in keywords for synonym in party_synonyms[party1]) and \
-                       any(synonym in keywords for synonym in party_synonyms[party2]):
-                        count += 1
-                if count > 0:
-                    net.add_edge(party1, party2, value=count, title=f"Topic: {topic}, Co-occurrence: {count}")
+    for party, synonyms in party_synonyms.items():
+        count = topic_df[topic_df['keyword'].isin(synonyms)].shape[0]
+        if count > 0:
+            net.add_edge(topic, party, value=count, title=f"Topic: {topic}, Party: {party}, Co-occurrence: {count}", color=party_colors[party])
 
-    # Add legend to explain colors and thickness
-    legend_html = """
-    <div style="position: absolute; right: 10px; top: 10px; background-color: white; padding: 10px; border: 1px solid black;">
-        <h3>Legend</h3>
-        <p><b>Node:</b> Political Party</p>
-        <p><b>Edge Thickness:</b> Frequency of Co-occurrence</p>
-        <p>Thicker edges represent more frequent co-occurrences of mentions between the parties in the same posts.</p>
-    </div>
-    """
-    net.html += legend_html
-
-    # Save and show the graph for the current topic
-    net.show(f'political_topics_network_{topic}.html')
+# Save and show the graph
+net.show('topics_parties_network.html')

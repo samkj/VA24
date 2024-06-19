@@ -76,7 +76,8 @@ app.layout = html.Div([
         dcc.Tab(label='Health', value='health'),
         dcc.Tab(label='Education', value='education'),
     ]),
-    html.Div(id='tabs-content')
+    html.Div(id='tabs-content'),
+    html.Iframe(srcDoc=open('topics_parties_network.html', 'r').read(), width='100%', height='750px')
 ])
 
 @app.callback(
