@@ -1,13 +1,12 @@
 import json
 import dash
 from dash import dcc, html
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output
 import pandas as pd
 from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import networkx as nx
 from services.data_service import get_posts_by_state  # Assuming data_service.py is in the same directory
 
 app = dash.Dash(__name__)
@@ -70,7 +69,14 @@ app.layout = html.Div([
         value=0,
         marks={i: f'Month {i + 1}' for i in range(12)}
     ),
-    dcc.Graph(id='network-graph', figure=go.Figure())
+    dcc.Tabs(id='topic-tabs', value='climate', children=[
+        dcc.Tab(label='Climate', value='climate'),
+        dcc.Tab(label='Migration', value='migration'),
+        dcc.Tab(label='Economy', value='economy'),
+        dcc.Tab(label='Health', value='health'),
+        dcc.Tab(label='Education', value='education'),
+    ]),
+    html.Div(id='tabs-content')
 ])
 
 @app.callback(
@@ -115,86 +121,11 @@ def update_sentiment_piecharts(selected_states, start_date, end_date):
     return fig
 
 @app.callback(
-    Output('network-graph', 'figure'),
-    Input('state-checklist', 'value'),
-    Input('date-picker-range', 'start_date'),
-    Input('date-picker-range', 'end_date')
+    Output('tabs-content', 'children'),
+    Input('topic-tabs', 'value')
 )
-def update_network_graph(selected_states, start_date, end_date):
-    if not selected_states:
-        return go.Figure()
-
-    topics = ['climate', 'migration', 'economy', 'health', 'education']
-    party_synonyms = {
-        'ÖVP': ['ÖVP', 'OEVP'],
-        'FPÖ': ['FPÖ', 'FPOE', 'Blaue', 'Blauen', 'Freiheitliche'],
-        'Grüne': ['Grüne', 'Gruene'],
-        'SPÖ': ['SPÖ', 'SPOE'],
-        'Neos': ['Neos']
-    }
-
-    combined_df = pd.concat([get_posts_by_state(state, start_date, end_date) for state in selected_states])
-    if combined_df.empty:
-        return go.Figure()
-
-    G = nx.Graph()
-    for party, synonyms in party_synonyms.items():
-        G.add_node(party)
-
-    for topic in topics:
-        topic_df = combined_df[combined_df['keyword'].str.contains(topic, case=False, na=False)]
-        for party1 in party_synonyms.keys():
-            for party2 in party_synonyms.keys():
-                if party1 != party2:
-                    count1 = topic_df[topic_df['keyword'].isin(party_synonyms[party1])].shape[0]
-                    count2 = topic_df[topic_df['keyword'].isin(party_synonyms[party2])].shape[0]
-                    if count1 > 0 and count2 > 0:
-                        sentiment1 = topic_df[topic_df['keyword'].isin(party_synonyms[party1])]['BERT_class'].value_counts(normalize=True)
-                        sentiment2 = topic_df[topic_df['keyword'].isin(party_synonyms[party2])]['BERT_class'].value_counts(normalize=True)
-                        G.add_edge(party1, party2, weight=(count1 + count2) / 2,
-                                   sentiment1=sentiment1, sentiment2=sentiment2)
-
-    pos = nx.spring_layout(G, k=0.5)
-    edge_trace = []
-    for edge in G.edges(data=True):
-        x0, y0 = pos[edge[0]]
-        x1, y1 = pos[edge[1]]
-        weight = edge[2]['weight']
-        sentiment1 = edge[2]['sentiment1']
-        sentiment2 = edge[2]['sentiment2']
-        edge_trace.append(go.Scatter(
-            x=[x0, x1, None],
-            y=[y0, y1, None],
-            line=dict(width=weight, color='gray'),
-            hoverinfo='text',
-            mode='lines',
-            text=f"Sentiment {edge[0]}: {sentiment1}\nSentiment {edge[1]}: {sentiment2}"
-        ))
-
-    node_trace = go.Scatter(
-        x=[pos[node][0] for node in G.nodes()],
-        y=[pos[node][1] for node in G.nodes()],
-        text=[node for node in G.nodes()],
-        mode='markers+text',
-        hoverinfo='text',
-        marker=dict(
-            showscale=False,
-            color='lightblue',
-            size=10,
-            line_width=2
-        )
-    )
-
-    fig = go.Figure(data=edge_trace + [node_trace],
-                    layout=go.Layout(
-                        title='Network Graph of Political Topics with Sentiment',
-                        showlegend=False,
-                        hovermode='closest',
-                        margin=dict(b=20, l=5, r=5, t=40),
-                        xaxis=dict(showgrid=False, zeroline=False),
-                        yaxis=dict(showgrid=False, zeroline=False)
-                    ))
-    return fig
+def render_content(tab):
+    return html.Iframe(srcDoc=open(f'political_topics_network_{tab}.html', 'r').read(), width='100%', height='750px')
 
 if __name__ == '__main__':
     app.run_server(debug=True)
