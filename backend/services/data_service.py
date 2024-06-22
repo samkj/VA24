@@ -13,11 +13,10 @@ def get_posts_by_state(state, start_date=None, end_date=None):
     try:
         df = pd.read_csv(file_path)
     except FileNotFoundError:
-        print(f"File not found for state: {state}")
-        return pd.DataFrame()  # Return an empty DataFrame if the file is not found
+        return pd.DataFrame()  
 
-    if start_date and end_date:
-        df = df[(df['post_date'] >= start_date) & (df['post_date'] <= end_date)]
+    #if start_date and end_date:
+        #df = df[(df['post_date'] >= start_date) & (df['post_date'] <= end_date)]
     
     return df
 

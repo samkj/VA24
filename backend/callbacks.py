@@ -4,11 +4,50 @@ import plotly.express as px
 import json
 from wordcloud import WordCloud
 import dash_bootstrap_components as dbc
-import dash_html_components as html
-import dash_core_components as dcc
+from dash import dcc, html
 import plotly.graph_objects as go
-from services.data_service import load_sentiment_data, load_wordcloud_data, query_sentiment_data
+from plotly.subplots import make_subplots
+from services.data_service import load_sentiment_data, load_wordcloud_data, query_sentiment_data, get_posts_by_state
 
+def update_sentiment_piecharts(selected_states, start_date=None, end_date=None):
+    if not selected_states:
+        return go.Figure()
+
+    party_synonyms = {
+        'ÖVP': ['ÖVP', 'OEVP', 'Volkspartei', 'Schwarz', 'Schwarzen'],
+        'FPÖ': ['FPÖ', 'FPOE', 'Blaue', 'Blauen', 'Freiheitliche', 'Blau'],
+        'Grüne': ['Grüne', 'Gruene', 'Die Grünen'],
+        'SPÖ': ['SPÖ', 'SPOE', 'Sozialdemokratische Partei Österreichs', 'Sozialdemokraten', 'Roten', 'Rot'],
+        'Neos': ['Neos', 'NEOS', 'Neue Österreich', 'Liberales Forum', 'Pink', 'Pinken']
+    }
+    fig = make_subplots(
+        rows=1, 
+        cols=len(party_synonyms), 
+        subplot_titles=list(party_synonyms.keys()),
+        specs=[[{'type': 'pie'} for _ in party_synonyms]]  
+    )
+
+    combined_df = pd.concat([get_posts_by_state(state, start_date, end_date) for state in selected_states])
+    if combined_df.empty:
+        return go.Figure()
+
+    for i, (party, synonyms) in enumerate(party_synonyms.items()):
+        party_df = combined_df[combined_df['keyword'].isin(synonyms)]
+        sentiments = party_df['BERT_class'].value_counts(normalize=True) * 100
+        sentiments = [sentiments.get('NEGATIVE', 0), sentiments.get('NEUTRAL', 0), sentiments.get('POSITIVE', 0)]
+
+        fig.add_trace(
+            go.Pie(
+                labels=['Negative', 'Neutral', 'Positive'], 
+                values=sentiments, 
+                name=party,
+                marker=dict(colors=['red', 'gray', 'green'])
+            ),
+            row=1, col=i+1
+        )
+
+    fig.update_layout(title_text='Sentiment Distribution for Selected States by Party', showlegend=False)
+    return fig
 
 def register_callbacks(app):
     with open('backend/data/map_data/oesterreich.json') as f:
@@ -51,7 +90,6 @@ def register_callbacks(app):
                         co_ordinates = [c for c in feature['geometry']['coordinates'][0][0]]
                     else:
                         co_ordinates = feature['geometry']['coordinates'][0]
-                    # print("co_ordinates", co_ordinates)
                     center = [sum([c[0] for c in co_ordinates]) / len(co_ordinates),
                               sum([c[1] for c in co_ordinates]) / len(co_ordinates)]
                     break
@@ -86,15 +124,10 @@ def register_callbacks(app):
     def update_sentiment_graph(click_data, filter1):
         # if a state is selected, filter the data based on the selected state
         state = click_data['points'][0]['location'] if click_data else None
-        print("Filter1---state", filter1, state)
         sentiment_data = load_sentiment_data(state, filter1)
-        print(sentiment_data.head(5))
-        # count the number of positive, negative and neutral sentiments and divide by the total number of sentiments
         positive = sentiment_data[sentiment_data['BERT_class'] == 'POSITIVE'].shape[0] / sentiment_data.shape[0] * 100
         negative = sentiment_data[sentiment_data['BERT_class'] == 'NEGATIVE'].shape[0] / sentiment_data.shape[0] * 100
         neutral = sentiment_data[sentiment_data['BERT_class'] == 'NEUTRAL'].shape[0] / sentiment_data.shape[0] * 100
-        print("Positive", positive, "Negative", negative, "Neutral", neutral)
-        print("SUM", positive + negative + neutral)
 
         fig = go.Figure(
             go.Barpolar(
@@ -126,7 +159,7 @@ def register_callbacks(app):
                     max=2023,
                     step=1,
                     value=2020,
-                    marks={i: f'{i}%' for i in range(2019, 2024)}
+                    marks={i: f'{i}' for i in range(2019, 2024)}
                 )
             ])
         ])
@@ -138,7 +171,6 @@ def register_callbacks(app):
         [Input('map', 'clickData'), Input('navbar-dropdown', 'value')]
     )
     def update_url(click_data, navbar_filter):
-        print("In update_url", click_data, navbar_filter)
         if click_data:
             state = click_data['points'][0]['location']
             if navbar_filter:
@@ -155,10 +187,8 @@ def register_callbacks(app):
     def update_wordcloud_graph(click_data, filter1):
         # If a city is clicked, extract the clicked city
         city = click_data['points'][0]['location'] if click_data else None
-        print("In Word Cloud", city, filter1)
 
         # Load the word cloud data for the clicked city and the selected party
-        # This is a placeholder. Replace with your actual code to load the word cloud data.
         wordcloud_data = load_wordcloud_data(city, filter1)
 
         # Create a word cloud with the word cloud data
@@ -166,7 +196,7 @@ def register_callbacks(app):
 
         # Convert the word cloud to a Plotly figure, and remove the co, ordinates
         fig = px.imshow(wc, binary_string=True)
-        fig.update_xaxes(showticklabels=False).update_yaxes(showticklabels=False)
+        fig.update_xaxes(showticklabels=False).update_yaxes(showticklabels(False))
         return fig
 
     @app.callback(
@@ -175,25 +205,18 @@ def register_callbacks(app):
         [State('store', 'data')]
     )
     def update_table(clickData, store_data):
-        # print("In update_table", clickData)
         if clickData is None:
             return [], {'display': 'none'}, None
-        print("Store Data", store_data)
 
         # Extract the sentiment from the clicked data point
-        sentiment = clickData['points'][0][
-            'theta']  # replace 'label' with the key that holds the sentiment in your data
-        # print("Sentiment", sentiment)
+        sentiment = clickData['points'][0]['theta']
 
         if store_data and store_data['points'][0]['theta'] == sentiment:
             return [], {'display': 'none'}, None
 
         # Query your data source to get the list of data corresponding to the clicked sentiment
-        # This is a placeholder, replace with your actual query
         data = query_sentiment_data(sentiment).head(15)
-
         data = data.to_dict('records')
-        # print("Data", data)
 
         return data, {'display': 'block'}, clickData
 
@@ -205,3 +228,13 @@ def register_callbacks(app):
         return html.Iframe(srcDoc=open(f'political_topics_network_{tab}.html', 'r').read(), width='100%',
                            height='750px')
 
+    @app.callback(
+        Output('sentiment-piecharts', 'figure'),
+        [Input('state-checklist', 'value'),
+         Input('date-slider', 'value')]
+    )
+    def update_piecharts(selected_states, selected_year):
+        # Convert the selected year to start and end dates
+        start_date = f"{selected_year}-01-01"
+        end_date = f"{selected_year}-12-31"
+        return update_sentiment_piecharts(selected_states, start_date, end_date)
