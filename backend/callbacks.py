@@ -1,7 +1,8 @@
 import pandas as pd
+import numpy as np
 from dash.dependencies import Input, Output, State
 import plotly.express as px
-import json
+import json, time
 from wordcloud import WordCloud
 import dash_bootstrap_components as dbc
 from dash import dcc, html
@@ -130,6 +131,21 @@ def register_callbacks(app):
         state = click_data['points'][0]['location'] if click_data else None
         sentiment_data = load_sentiment_data(state, filter1)
         print("Sentiment Data", sentiment_data.shape)
+        if sentiment_data.empty:
+            # Create an empty figure with a message
+            fig = go.Figure(layout=go.Layout(
+                xaxis=dict(showgrid=False, zeroline=False, visible=False),
+                yaxis=dict(showgrid=False, zeroline=False, visible=False),
+                annotations=[dict(
+                    text="No data available for the selected state and party",
+                    xref="paper",
+                    yref="paper",
+                    showarrow=False,
+                    font=dict(size=28))
+                ]
+            ))
+            return [dbc.Card(dcc.Graph(figure=fig, id='sentiment-polar-chart'))]
+
         positive = sentiment_data[sentiment_data['BERT_class'] == 'POSITIVE'].shape[0] / sentiment_data.shape[0] * 100
         negative = sentiment_data[sentiment_data['BERT_class'] == 'NEGATIVE'].shape[0] / sentiment_data.shape[0] * 100
         neutral = sentiment_data[sentiment_data['BERT_class'] == 'NEUTRAL'].shape[0] / sentiment_data.shape[0] * 100
@@ -254,6 +270,21 @@ def register_callbacks(app):
 
         # Load the word cloud data for the clicked city and the selected party
         wordcloud_data = load_wordcloud_data(city, filter1)
+
+        # Check if the wordcloud_data is empty
+        if not wordcloud_data:
+            fig = go.Figure(layout=go.Layout(
+                xaxis=dict(showgrid=False, zeroline=False, visible=False),
+                yaxis=dict(showgrid=False, zeroline=False, visible=False),
+                annotations=[dict(
+                    text="No data available for the selected city and party",
+                    xref="paper",
+                    yref="paper",
+                    showarrow=False,
+                    font=dict(size=28))
+                ]
+            ))
+            return fig
 
         # Create a word cloud with the word cloud data
         wc = WordCloud(background_color='white').generate_from_frequencies(wordcloud_data)
