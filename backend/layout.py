@@ -38,7 +38,9 @@ fig.update_layout(
 dropdown_menu = dcc.Dropdown(
     id='navbar-dropdown',
     options=[{'label': option['label'], 'value': option['value']} for option in data_dropdown_Party()],
-    value='All'  # default value
+    value='All',  # default value
+    style={'width': '300px'},
+    multi=True
 )
 
 # Create navbar and add the dropdown menu
@@ -57,12 +59,12 @@ navbar = dbc.Navbar(
 # Add a DataTable to the layout
 datatable = dash_table.DataTable(
     id='sentiment-table',
-    columns=[{'name': i, 'id': i} for i in ['author_name', 'title', 'comment_body', 'BERT_label', 'BERT_Compound']],
+    columns=[{'name': i, 'id': i} for i in ['author_name', 'title', 'comment_body']],
     data=[],
     style_table={'overflowX': 'auto'},  # Hide the table by default
     style_header={
-        'backgroundColor': 'rgb(230, 230, 230)',
-        'fontWeight': 'bold'
+        'backgroundColor': 'rgba(0, 116, 217, 0.3)',
+        'border': '1px solid rgb(0, 116, 217)'
     },
     style_cell={
         'textAlign': 'left',
@@ -82,6 +84,7 @@ datatable = dash_table.DataTable(
         }
     ]
 )
+
 
 def create_layout():
     # Layout structure
