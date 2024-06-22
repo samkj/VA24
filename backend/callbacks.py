@@ -8,6 +8,9 @@ from dash import dcc, html
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from services.data_service import load_sentiment_data, load_wordcloud_data, query_sentiment_data, get_posts_by_state
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+from services.data_service import data_dropdown_Party
+
 
 def update_sentiment_piecharts(selected_states, start_date=None, end_date=None):
     if not selected_states:
@@ -48,6 +51,7 @@ def update_sentiment_piecharts(selected_states, start_date=None, end_date=None):
 
     fig.update_layout(title_text='Sentiment Distribution for Selected States by Party', showlegend=False)
     return fig
+
 
 def register_callbacks(app):
     with open('backend/data/map_data/oesterreich.json') as f:
@@ -125,6 +129,7 @@ def register_callbacks(app):
         # if a state is selected, filter the data based on the selected state
         state = click_data['points'][0]['location'] if click_data else None
         sentiment_data = load_sentiment_data(state, filter1)
+        print("Sentiment Data", sentiment_data.shape)
         positive = sentiment_data[sentiment_data['BERT_class'] == 'POSITIVE'].shape[0] / sentiment_data.shape[0] * 100
         negative = sentiment_data[sentiment_data['BERT_class'] == 'NEGATIVE'].shape[0] / sentiment_data.shape[0] * 100
         neutral = sentiment_data[sentiment_data['BERT_class'] == 'NEUTRAL'].shape[0] / sentiment_data.shape[0] * 100
@@ -166,19 +171,78 @@ def register_callbacks(app):
 
         return [card_content]
 
+    # @app.callback(
+    #     Output('url', 'pathname'),
+    #     [Input('map', 'clickData'), Input('navbar-dropdown', 'value'), Input('url', 'pathname')]
+    # )
+    # def update_url(click_data, navbar_filter, pathname):
+    #     parsed_url = urlparse(pathname)
+    #     query_params = parse_qs(parsed_url.query)
+    #     print("query_params", query_params)
+    #     print("parsed_url", parsed_url)
+    #     print("pathname", pathname)
+    #     print("NAVBAR FILTER", navbar_filter)
+    #
+    #     # Update the party filter in the query string
+    #     if pathname == '/':
+    #         query_params['party'] = ["All"]
+    #     else:
+    #         # if a party is selected, add it to the list of selected parties
+    #         if navbar_filter != 'All':
+    #             if 'party' in query_params:
+    #                 current_parties = set(query_params['party'])
+    #                 current_parties.add(navbar_filter)
+    #                 if 'All' in current_parties:
+    #                     current_parties.remove('All')
+    #                 print("Current Parties", current_parties, list(current_parties))
+    #                 query_params['party'] = list(current_parties)
+    #                 print("Query Params", query_params)
+    #                 if navbar_filter not in current_parties:
+    #                     current_parties.add(navbar_filter)
+    #             else:
+    #                 query_params['party'] = [navbar_filter]
+    #         elif navbar_filter == 'All':
+    #             # remove the party filter if 'All' is selected
+    #             if 'party' in query_params:
+    #                 query_params.pop('party')
+    #
+    #     # Construct the new query string
+    #     new_query = urlencode(query_params, doseq=True)
+    #     if click_data:
+    #         state = click_data['points'][0]['location']
+    #         new_path = '/' + state
+    #     else:
+    #         new_path = '/'
+    #
+    #     # Construct the new URL
+    #     new_url = urlunparse(parsed_url._replace(path=new_path, query=new_query))
+    #     return new_url
+
     @app.callback(
-        Output('url', 'pathname'),
-        [Input('map', 'clickData'), Input('navbar-dropdown', 'value')]
+        Output('navbar-dropdown', 'value'),
+        [Input('navbar-dropdown', 'value')]
     )
-    def update_url(click_data, navbar_filter):
-        if click_data:
-            state = click_data['points'][0]['location']
-            if navbar_filter:
-                return '/' + state + '?party=' + navbar_filter
-            return '/' + state
-        if navbar_filter:
-            return '/?party=' + navbar_filter
-        return '/'
+    def update_dropdown(selected_values):
+        print("Selected Values", selected_values)
+        # make sure that the selected values are always a list
+        if not isinstance(selected_values, list):
+            selected_values = [selected_values]
+        options = [{'label': option['label'], 'value': option['value']} for option in data_dropdown_Party()]
+        print("Options", options)
+
+        # if other options are selected, and 'All' is selected, remove all other options
+        if len(selected_values) > 1:
+            print("More than one selected")
+            if 'All' in selected_values and selected_values[0] == 'All':
+                # if 'All' is at the beginning, remove 'All'
+                selected_values = selected_values[1:]
+            elif 'All' in selected_values and selected_values[-1] == 'All':
+                selected_values = ['All']
+            else:
+                # if 'All' is not at the beginning, remove all other options
+                selected_values = selected_values
+        print("Selected Values", selected_values)
+        return selected_values
 
     @app.callback(
         Output('wordcloud-graph', component_property='figure'),
@@ -196,7 +260,7 @@ def register_callbacks(app):
 
         # Convert the word cloud to a Plotly figure, and remove the co, ordinates
         fig = px.imshow(wc, binary_string=True)
-        fig.update_xaxes(showticklabels=False).update_yaxes(showticklabels(False))
+        fig.update_xaxes(visible=False).update_yaxes(visible=False)
         return fig
 
     @app.callback(

@@ -1,4 +1,19 @@
 import pandas as pd
+import string
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+from collections import Counter
+
+
+party_synonyms = {
+        'ÖVP': ['ÖVP', 'OEVP', 'Volkspartei', 'Schwarz', 'Schwarzen'],
+        'FPÖ': ['FPÖ', 'FPOE', 'Blaue', 'Blauen', 'Freiheitliche', 'Blau'],
+        'Grüne': ['Grüne', 'Gruene', 'Die Grünen'],
+        'SPÖ': ['SPÖ', 'SPOE', 'Sozialdemokratische Partei Österreichs', 'Sozialdemokraten', 'Roten', 'Rot'],
+        'Neos': ['Neos', 'NEOS', 'Neue Österreich', 'Liberales Forum', 'Pink', 'Pinken']
+    }
+
 
 def load_data(file_path: str) -> pd.DataFrame:
     """
@@ -9,7 +24,8 @@ def load_data(file_path: str) -> pd.DataFrame:
 
 
 def get_posts_by_state(state, start_date=None, end_date=None):
-    file_path = f'subreddits_datafiles/processed_datafiles_sentiment/{state}_politik_posts_sentiment.csv'
+    # file_path = f'subreddits_datafiles/processed_datafiles_sentiment/sentiment_all_subreddits_data.csv'
+    file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     try:
         df = pd.read_csv(file_path)
     except FileNotFoundError:
@@ -17,8 +33,9 @@ def get_posts_by_state(state, start_date=None, end_date=None):
 
     #if start_date and end_date:
         #df = df[(df['post_date'] >= start_date) & (df['post_date'] <= end_date)]
+    return df[df['state'] == state]
     
-    return df
+    # return df
 
 
 def data_dropdown_Party() -> list:
@@ -32,43 +49,42 @@ def data_dropdown_Party() -> list:
         {'label': 'Neos', 'value': 'Neos'}
     ]
 
+
 def load_sentiment_data(state: str, filter) -> pd.DataFrame:
     """
     This function loads the sentiment data for a given state from a .csv file and returns it as a pandas DataFrame.
     """
     print("State", state)
     print("Filter", filter)
-    # Define the column names
-    column_names = ["author_name","post_id","title","body","post_date","keyword","comment_author_name""",
-                    "comment_id","comment_parent_id","comment_body","comment_score","comment_created_utc",
-                    "comment_replies_count","comment_keyword","subreddit,state","cleaned_body",
-                    "cleaned_comment_body","BERT_class","BERT_Compound","BERT_label"]
-    state_prefix = 'austria_'
-    if state == 'Steiermark':
-        state_prefix = 'Stmk_'
-    elif state == 'Niederoesterreich':
-        state_prefix = 'Noesterreich_'
-    elif state == 'Oberoesterreich':
-        state_prefix = 'Linz_'
-    elif state == 'Salzburg':
-        state_prefix = 'Salzburg_'
-    elif state == 'Tirol':
-        state_prefix = 'Tirol_'
-    elif state == 'Wien':
-        state_prefix = 'wien_'
-
-    # Construct the file path based on the state
-    # file_path = f'subreddits_datafiles/processed_datafiles_sentiment/{state_prefix}politik_posts_sentiment.csv'
-    temp_file_path = f'subreddits_datafiles/processed_datafiles_sentiment/sentiment_all_subreddits_data.csv'
-    # print("File Path", file_path)
+    file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
+    print("SENTIMENT File Path", file_path)
 
     # Load the CSV file into a pandas DataFrame
-    df = pd.read_csv(temp_file_path, names=column_names, header=None, skiprows=1)
-    print(df.describe())
-    # print(df.head(5))  # Print the DataFrame for debugging
-    # if start_date and end_date:
-    #     df = df[(df['post_date'] >= start_date) & (df['post_date'] <= end_date)]
+    df = pd.read_csv(file_path)
+    if state:
+        print("State is not None")
+        if state == 'Niederoesterreich':
+            state = 'Niederösterreich'
+        elif state == 'Oberoesterreich':
+            state = 'Oberösterreich'
+        df = get_posts_by_state(state)
+        print(df.head(5))  # Print the DataFrame for debugging
+    else:
+        print("State is None")
+        df = df
 
+    # Parties can be multiple, so we need to filter the data based on the selected parties
+    if filter != ['All']:
+        print("Not All Party in sentiment data")
+        # filter also for the synonyms of the parties
+        filter = [party for party in party_synonyms if party in filter]
+        df = df[df['comment_keyword'].isin(filter)]
+        print("HAHAHHAHHAH")
+        print(df.head(5))  # Print the DataFrame for debugging
+    else:
+        print("All Party in sentiment data")
+        df = df
+    print("HAHAHHAHHAH")
     return df
 
 
@@ -77,27 +93,33 @@ def load_wordcloud_data(city: str, party: str) -> dict:
     This function loads the word cloud data for a given city and party from a .csv file and returns it as a pandas DataFrame.
     """
     print("load_wordcloud_data Party", party)
-    state_prefix = 'austria_'
-    if city == 'Steiermark':
-        state_prefix = 'Stmk_'
-    elif city == 'Niederoesterreich':
-        state_prefix = 'Noesterreich_'
-    elif city == 'Oberoesterreich':
-        state_prefix = 'Linz_'
-    elif city == 'Salzburg':
-        state_prefix = 'Salzburg_'
-    elif city == 'Tirol':
-        state_prefix = 'Tirol_'
-    elif city == 'Wien':
-        state_prefix = 'wien_'
-    file_path = f'subreddits_datafiles/processed_datafiles_sentiment/{state_prefix}politik_posts_sentiment.csv'
-    print("File Path", file_path)
+    print("load_wordcloud_data City", city)
+    file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     df = pd.read_csv(file_path)
-
-    # Filter the data based on the selected party
-    if party != 'All':
-        df = df[df['comment_keyword'] == party]
+    if city:
+        print("City is not None")
+        # if Niederoesterreich -> Niederösterreich and same for Oberoesterreich
+        if city == 'Niederoesterreich':
+            city = 'Niederösterreich'
+        elif city == 'Oberoesterreich':
+            city = 'Oberösterreich'
+        df = get_posts_by_state(city)
+        print(df.head(5))
     else:
+        print("City is None")
+        df = df
+
+    # make sure that party is a list
+    if not isinstance(party, list):
+        party = [party]
+    # parties can be multiple, so we need to filter the data based on the selected parties
+    if party != ['All']:
+        print("Not All Party")
+        filter = [parties for parties in party_synonyms if parties in party]
+        df = df[df['comment_keyword'].isin(filter)]
+        print(df.shape)
+    else:
+        print("All Party")
         df = df
 
     # combine the title and body columns
@@ -119,6 +141,7 @@ def load_wordcloud_data(city: str, party: str) -> dict:
     word_freq = Counter(' '.join(df['text']).split())
     return dict(word_freq)
 
+
 def query_sentiment_data(sentiment: str) -> pd.DataFrame:
     """
     This function queries the sentiment data for a given sentiment and party from a .csv file and returns it as a pandas DataFrame.
@@ -134,4 +157,4 @@ def query_sentiment_data(sentiment: str) -> pd.DataFrame:
     # if party != 'All':
     #     df = df[df['comment_keyword'] == party]
 
-    return df[['author_name', 'title', 'comment_body', 'BERT_label', 'BERT_Compound']]
+    return df[['author_name', 'title', 'comment_body']]
