@@ -54,9 +54,9 @@ def load_sentiment_data(state: str, filter, selected_year) -> pd.DataFrame:
     """
     This function loads the sentiment data for a given state from a .csv file and returns it as a pandas DataFrame.
     """
-    print("Selected Year", selected_year)
-    print("State", state)
-    print("Filter", filter)
+    # print("Selected Year", selected_year)
+    # print("State", state)
+    # print("Filter", filter)
     file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     # print("SENTIMENT File Path", file_path)
 
@@ -68,7 +68,7 @@ def load_sentiment_data(state: str, filter, selected_year) -> pd.DataFrame:
 
     # Filter the data based on the selected year
     df = df[df['post_date'].dt.year <= selected_year]
-    print(df.columns)
+    # print(df.columns)
 
     if state:
         print("State is not None")
@@ -77,9 +77,9 @@ def load_sentiment_data(state: str, filter, selected_year) -> pd.DataFrame:
         elif state == 'Oberoesterreich':
             state = 'Oberösterreich'
         df = get_posts_by_state(state)
-        print(df.head(5))  # Print the DataFrame for debugging
+        # print(df.head(5))  # Print the DataFrame for debugging
     else:
-        print("State is None")
+        # print("State is None")
         df = df
 
     # Parties can be multiple, so we need to filter the data based on the selected parties
@@ -88,17 +88,17 @@ def load_sentiment_data(state: str, filter, selected_year) -> pd.DataFrame:
         # filter also for the synonyms of the parties
         filter = [party for party in party_synonyms if party in filter]
         df = df[df['comment_keyword'].isin(filter)]
-        print("HAHAHHAHHAH")
-        print(df.head(5))  # Print the DataFrame for debugging
+        # print("HAHAHHAHHAH")
+        # print(df.head(5))  # Print the DataFrame for debugging
     else:
         print("All Party in sentiment data")
         df = df
 
-    print("HAHAHHAHHAH")
+    # print("HAHAHHAHHAH")
     return df
 
 
-def load_wordcloud_data(city: str, party: str, selected_year) -> dict:
+def load_wordcloud_data(city: str, party, selected_year) -> dict:
     """
     This function loads the word cloud data for a given city and party from a .csv file and returns it as a pandas DataFrame.
     """
@@ -159,21 +159,27 @@ def load_wordcloud_data(city: str, party: str, selected_year) -> dict:
     return dict(word_freq)
 
 
-def query_sentiment_data(sentiment: str) -> pd.DataFrame:
+def query_sentiment_data(sentiment: str, filter) -> pd.DataFrame:
     """
     This function queries the sentiment data for a given sentiment and party from a .csv file and returns it as a pandas DataFrame.
     """
-    print("query_sentiment_data", sentiment)
+    # print("query_sentiment_data", sentiment)
+    # print("query_sentiment_data", filter)
     file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     # Load the sentiment data from a CSV file
     df = pd.read_csv(file_path)
 
     # Filter the data based on the selected sentiment
-    # df = df[df['BERT_label'] == sentiment]
-    # print(df.head(5))  # Print the DataFrame for debugging
+    df = df[df['BERT_class'] == sentiment.upper()]
 
-    # Filter the data based on the selected party
-    # if party != 'All':
-    #     df = df[df['comment_keyword'] == party]
+    # As parties can be multiple, we need to filter
+    # the data based on the selected parties
+    if filter != ['All']:
+        filter = [party for party in party_synonyms if party in filter]
+        df = df[df['comment_keyword'].isin(filter)]
+    else:
+        df = df
+
+    print("INSIDE query_sentiment_data--", df.describe())
 
     return df[['author_name', 'title', 'comment_body']]

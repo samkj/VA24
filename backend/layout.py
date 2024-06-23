@@ -57,32 +57,56 @@ navbar = dbc.Navbar(
 )
 
 # Add a DataTable to the layout
-datatable = dash_table.DataTable(
+# datatable = dash_table.DataTable(
+#     id='sentiment-table',
+#     columns=[{'name': i, 'id': i} for i in ['author_name', 'title', 'comment_body']],
+#     data=[],
+#     style_table={'overflowX': 'auto'},  # Hide the table by default
+#     style_header={
+#         'backgroundColor': 'rgba(0, 116, 217, 0.3)',
+#         'border': '1px solid rgb(0, 116, 217)'
+#     },
+#     style_cell={
+#         'textAlign': 'left',
+#         'maxHeight': '500px',
+#         'whiteSpace': 'no-wrap',
+#         'overflow': 'hidden',
+#         'textOverflow': 'ellipsis',
+#     },
+#     style_data={
+#         'whiteSpace': 'normal',
+#         'height': 'auto'
+#     },
+#     style_data_conditional=[
+#         {
+#             'if': {'row_index': 'odd'},
+#             'backgroundColor': 'rgb(248, 248, 248)'
+#         }
+#     ]
+# )
+
+table_graph = dcc.Graph(
     id='sentiment-table',
-    columns=[{'name': i, 'id': i} for i in ['author_name', 'title', 'comment_body']],
-    data=[],
-    style_table={'overflowX': 'auto'},  # Hide the table by default
-    style_header={
-        'backgroundColor': 'rgba(0, 116, 217, 0.3)',
-        'border': '1px solid rgb(0, 116, 217)'
-    },
-    style_cell={
-        'textAlign': 'left',
-        'maxHeight': '500px',
-        'whiteSpace': 'no-wrap',
-        'overflow': 'hidden',
-        'textOverflow': 'ellipsis',
-    },
-    style_data={
-        'whiteSpace': 'normal',
-        'height': 'auto'
-    },
-    style_data_conditional=[
-        {
-            'if': {'row_index': 'odd'},
-            'backgroundColor': 'rgb(248, 248, 248)'
-        }
-    ]
+    figure=go.Figure(
+        data=[go.Table(
+            columnwidth=[150,200,250],
+            columnorder=[0,1,2],
+            header=dict(
+                values=['author_name', 'title', 'comment_body'],
+                align='center',
+                line=dict(width=1, color='rgb(50, 50, 50)'),
+                fill=dict(color='rgb(235, 100, 230)'),
+                font=dict(family="Arial", size=11, color="white")
+            ),
+            cells=dict(
+                values=[],  # The data is added in the callback
+                align=["center", "center", "center"],
+                line=dict(color="black", width=1),
+                fill=dict(color=['rgb(235, 193, 238)', 'rgba(228, 222, 249, 0.65)']),
+                font=dict(family="Arial", size=10, color=["black"])
+            )
+        )]
+    )
 )
 
 
@@ -107,7 +131,7 @@ def create_layout():
             ),
             html.Div(id='sentiment-card'),  # sentiment polar chart placeholder
             html.Div(id='sentiment-table-container', children=[
-                datatable
+                table_graph
             ]),
             dcc.Graph(id='wordcloud-graph'),
             dcc.Store(id='store'),

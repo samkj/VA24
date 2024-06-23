@@ -257,16 +257,38 @@ def register_callbacks(app):
 
 
     @app.callback(
-        [Output('sentiment-table', 'data'), Output('sentiment-table-container', 'style'),
+        [Output('sentiment-table', 'figure'), Output('sentiment-table-container', 'style'),
          Output('store', 'data')],
-        [Input('sentiment-polar-chart', 'clickData')],
+        [Input('sentiment-polar-chart', 'clickData'), Input('navbar-dropdown', 'value')],
         [State('store', 'data')]
     )
-    def update_table(clickData, store_data):
+    def update_table(clickData, filter, store_data):
+        print("INSIDE UPDATE TABLE--", filter)
         print("INSIDE UPDATE TABLE--", clickData)
         print("STORE DATA", store_data)
         if clickData is None:
-            return [], {'display': 'none'}, None
+            # Return an empty figure if clickData is None
+            fig = go.Figure(
+                data=[go.Table(
+                    columnwidth=[150, 200, 250],
+                    columnorder=[0, 1, 2],
+                    header=dict(
+                        values=['author_name', 'title', 'comment_body'],
+                        align='center',
+                        line=dict(width=1, color='rgb(50, 50, 50)'),
+                        fill=dict(color='rgb(235, 100, 230)'),
+                        font=dict(family="Arial", size=11, color="white")
+                    ),
+                    cells=dict(
+                        values=[[], [], []],
+                        align=["center", "center", "center"],
+                        line=dict(color="black", width=1),
+                        fill=dict(color=['rgb(235, 193, 238)', 'rgba(228, 222, 249, 0.65)']),
+                        font=dict(family="Arial", size=10, color=["black"])
+                    )
+                )]
+            )
+            return fig, {'display': 'none'}, None
 
         # Extract the sentiment from the clicked data point
         sentiment = clickData['points'][0]['theta']
@@ -280,7 +302,7 @@ def register_callbacks(app):
             visible = True
 
         # Query your data source to get the list of data corresponding to the clicked sentiment
-        data = query_sentiment_data(sentiment).head(15)
+        data = query_sentiment_data(sentiment, filter)
         data = data.to_dict('records')
 
         # Initialize store_data if it's None
@@ -291,7 +313,29 @@ def register_callbacks(app):
         store_data = {'sentiment': sentiment, 'visible': visible,
                       'force_update': not store_data.get('force_update', False)}
 
-        return data, style, store_data
+        # Create a new figure with the updated data
+        fig = go.Figure(
+            data=[go.Table(
+                columnwidth=[150, 200, 250],
+                columnorder=[0, 1, 2],
+                header=dict(
+                    values=['author_name', 'title', 'comment_body'],
+                    align='center',
+                    line=dict(width=1, color='rgb(50, 50, 50)'),
+                    fill=dict(color='rgb(235, 100, 230)'),
+                    font=dict(family="Arial", size=11, color="white")
+                ),
+                cells=dict(
+                    values=[[row[i] for row in data] for i in ['author_name', 'title', 'comment_body']],
+                    align=["center", "center", "center"],
+                    line=dict(color="black", width=1),
+                    fill=dict(color=['rgb(235, 193, 238)', 'rgba(228, 222, 249, 0.65)']),
+                    font=dict(family="Arial", size=10, color=["black"])
+                )
+            )]
+        )
+
+        return fig, style, store_data
 
     @app.callback(
         Output('tabs-content', 'children'),
