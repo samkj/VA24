@@ -96,17 +96,21 @@ def create_layout():
             html.Div(id='map-wrapper', children=[
                 dcc.Graph(id='map', figure=fig)
             ]),
+            html.H5("Select Date Range"),
+            dcc.Slider(
+                id='date-slider',
+                min=2019,
+                max=2024,
+                step=1,
+                value=2024,
+                marks={i: f'{i}' for i in range(2019, 2024+1)}
+            ),
             html.Div(id='sentiment-card'),  # sentiment polar chart placeholder
             html.Div(id='sentiment-table-container', children=[
                 datatable
             ]),
             dcc.Graph(id='wordcloud-graph'),
             dcc.Store(id='store'),
-            dcc.Interval(
-                id='interval-component',
-                interval=1 * 1000,  # in milliseconds
-                n_intervals=0
-            ),
             dcc.Tabs(id='topic-tabs', value='climate', children=[
                 dcc.Tab(label='Climate', value='climate'),
                 dcc.Tab(label='Migration', value='migration'),
@@ -116,21 +120,21 @@ def create_layout():
             ]),
             html.Div(id='tabs-content'),
             html.Iframe(srcDoc=open('topics_parties_network.html', 'r').read(), width='100%', height='750px'),
-            dcc.Checklist(
-                id='state-checklist',
-                options=[{'label': state, 'value': state} for state in states],
-                value=[state for state in states],  # All states selected by default
-                inline=True
-            ),
-            dcc.Slider(
-                id='date-slider',
-                min=2019,
-                max=2023,
-                step=1,
-                value=2020,
-                marks={i: f'{i}' for i in range(2019, 2024)}
-            ),
-            dcc.Graph(id='sentiment-piecharts', figure=go.Figure())
+            # dcc.Checklist(
+            #     id='state-checklist',
+            #     options=[{'label': state, 'value': state} for state in states],
+            #     value=[state for state in states],  # All states selected by default
+            #     inline=True
+            # ),
+            # dcc.Slider(
+            #     id='date-slider',
+            #     min=2019,
+            #     max=2024,
+            #     step=1,
+            #     value=2024,
+            #     marks={i: f'{i}' for i in range(2019, 2024)}
+            # ),
+            # dcc.Graph(id='sentiment-piecharts', figure=go.Figure())
         ], style={'max-width': '1200px', 'margin': '0 auto'})  # Center the layout
     ])
     return layout
