@@ -50,17 +50,26 @@ def data_dropdown_Party() -> list:
     ]
 
 
-def load_sentiment_data(state: str, filter) -> pd.DataFrame:
+def load_sentiment_data(state: str, filter, selected_year) -> pd.DataFrame:
     """
     This function loads the sentiment data for a given state from a .csv file and returns it as a pandas DataFrame.
     """
+    print("Selected Year", selected_year)
     print("State", state)
     print("Filter", filter)
     file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
-    print("SENTIMENT File Path", file_path)
+    # print("SENTIMENT File Path", file_path)
 
     # Load the CSV file into a pandas DataFrame
     df = pd.read_csv(file_path)
+
+    # Convert the 'post_date' column to datetime
+    df['post_date'] = pd.to_datetime(df['post_date'])
+
+    # Filter the data based on the selected year
+    df = df[df['post_date'].dt.year <= selected_year]
+    print(df.columns)
+
     if state:
         print("State is not None")
         if state == 'Niederoesterreich':
@@ -84,18 +93,26 @@ def load_sentiment_data(state: str, filter) -> pd.DataFrame:
     else:
         print("All Party in sentiment data")
         df = df
+
     print("HAHAHHAHHAH")
     return df
 
 
-def load_wordcloud_data(city: str, party: str) -> dict:
+def load_wordcloud_data(city: str, party: str, selected_year) -> dict:
     """
     This function loads the word cloud data for a given city and party from a .csv file and returns it as a pandas DataFrame.
     """
+    print("load_wordcloud_data Year", selected_year)
     print("load_wordcloud_data Party", party)
     print("load_wordcloud_data City", city)
     file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     df = pd.read_csv(file_path)
+    # Convert the 'post_date' column to datetime
+    df['post_date'] = pd.to_datetime(df['post_date'])
+
+    # Filter the data based on the selected year
+    df = df[df['post_date'].dt.year <= selected_year]
+
     if city:
         print("City is not None")
         # if Niederoesterreich -> Niederösterreich and same for Oberoesterreich
@@ -146,8 +163,10 @@ def query_sentiment_data(sentiment: str) -> pd.DataFrame:
     """
     This function queries the sentiment data for a given sentiment and party from a .csv file and returns it as a pandas DataFrame.
     """
+    print("query_sentiment_data", sentiment)
+    file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     # Load the sentiment data from a CSV file
-    df = pd.read_csv('subreddits_datafiles/processed_datafiles_sentiment/sentiment_all_subreddits_data.csv')
+    df = pd.read_csv(file_path)
 
     # Filter the data based on the selected sentiment
     # df = df[df['BERT_label'] == sentiment]

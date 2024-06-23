@@ -124,12 +124,16 @@ def register_callbacks(app):
 
     @app.callback(
         [Output('sentiment-card', 'children')],
-        [Input('map', 'clickData'), Input('navbar-dropdown', 'value')]
+        [Input('map', 'clickData'), Input('navbar-dropdown', 'value'),
+         Input('date-slider', 'value')]
     )
-    def update_sentiment_graph(click_data, filter1):
+    def update_sentiment_graph(click_data, filter1, selected_year):
+        print("INSIDE UPDATE SENTIMENT GRAPH--", selected_year)
         # if a state is selected, filter the data based on the selected state
         state = click_data['points'][0]['location'] if click_data else None
-        sentiment_data = load_sentiment_data(state, filter1)
+        sentiment_data = load_sentiment_data(state, filter1, selected_year)
+        min_year, max_year = pd.to_datetime(sentiment_data['post_date']).dt.year.min(), pd.to_datetime(sentiment_data['post_date']).dt.year.max()
+        print("Min Year", min_year, "Max Year", max_year)
         print("Sentiment Data", sentiment_data.shape)
         if sentiment_data.empty:
             # Create an empty figure with a message
@@ -173,66 +177,20 @@ def register_callbacks(app):
             dbc.CardBody([
                 dcc.Graph(figure=fig, id='sentiment-polar-chart'),
                 html.Hr(),
-                html.H5("Select Date Range"),
-                dcc.Slider(
-                    id='date-slider',
-                    min=2019,
-                    max=2023,
-                    step=1,
-                    value=2020,
-                    marks={i: f'{i}' for i in range(2019, 2024)}
-                )
+                # html.H5("Select Date Range"),
+                # dcc.Slider(
+                #     id='date-slider',
+                #     min=min_year,
+                #     max=2024,
+                #     step=1,
+                #     value=selected_year,
+                #     marks={i: f'{i}' for i in range(min_year, 2024+1)}
+                # )
             ])
         ])
 
         return [card_content]
 
-    # @app.callback(
-    #     Output('url', 'pathname'),
-    #     [Input('map', 'clickData'), Input('navbar-dropdown', 'value'), Input('url', 'pathname')]
-    # )
-    # def update_url(click_data, navbar_filter, pathname):
-    #     parsed_url = urlparse(pathname)
-    #     query_params = parse_qs(parsed_url.query)
-    #     print("query_params", query_params)
-    #     print("parsed_url", parsed_url)
-    #     print("pathname", pathname)
-    #     print("NAVBAR FILTER", navbar_filter)
-    #
-    #     # Update the party filter in the query string
-    #     if pathname == '/':
-    #         query_params['party'] = ["All"]
-    #     else:
-    #         # if a party is selected, add it to the list of selected parties
-    #         if navbar_filter != 'All':
-    #             if 'party' in query_params:
-    #                 current_parties = set(query_params['party'])
-    #                 current_parties.add(navbar_filter)
-    #                 if 'All' in current_parties:
-    #                     current_parties.remove('All')
-    #                 print("Current Parties", current_parties, list(current_parties))
-    #                 query_params['party'] = list(current_parties)
-    #                 print("Query Params", query_params)
-    #                 if navbar_filter not in current_parties:
-    #                     current_parties.add(navbar_filter)
-    #             else:
-    #                 query_params['party'] = [navbar_filter]
-    #         elif navbar_filter == 'All':
-    #             # remove the party filter if 'All' is selected
-    #             if 'party' in query_params:
-    #                 query_params.pop('party')
-    #
-    #     # Construct the new query string
-    #     new_query = urlencode(query_params, doseq=True)
-    #     if click_data:
-    #         state = click_data['points'][0]['location']
-    #         new_path = '/' + state
-    #     else:
-    #         new_path = '/'
-    #
-    #     # Construct the new URL
-    #     new_url = urlunparse(parsed_url._replace(path=new_path, query=new_query))
-    #     return new_url
 
     @app.callback(
         Output('navbar-dropdown', 'value'),
@@ -262,14 +220,17 @@ def register_callbacks(app):
 
     @app.callback(
         Output('wordcloud-graph', component_property='figure'),
-        [Input('map', 'clickData'), Input('navbar-dropdown', 'value')]
+        [Input('map', 'clickData'), Input('navbar-dropdown', 'value'),
+         Input('date-slider', 'value')]
     )
-    def update_wordcloud_graph(click_data, filter1):
+    def update_wordcloud_graph(click_data, filter1, selected_year):
+        print("INSIDE UPDATE WORDCLOUD GRAPH--")
         # If a city is clicked, extract the clicked city
         city = click_data['points'][0]['location'] if click_data else None
 
         # Load the word cloud data for the clicked city and the selected party
-        wordcloud_data = load_wordcloud_data(city, filter1)
+        wordcloud_data = load_wordcloud_data(city, filter1, selected_year)
+        # print("WORDCLOUD DATA", wordcloud_data)
 
         # Check if the wordcloud_data is empty
         if not wordcloud_data:
@@ -294,26 +255,43 @@ def register_callbacks(app):
         fig.update_xaxes(visible=False).update_yaxes(visible=False)
         return fig
 
+
     @app.callback(
-        [Output('sentiment-table', 'data'), Output('sentiment-table-container', 'style'), Output('store', 'data')],
+        [Output('sentiment-table', 'data'), Output('sentiment-table-container', 'style'),
+         Output('store', 'data')],
         [Input('sentiment-polar-chart', 'clickData')],
         [State('store', 'data')]
     )
     def update_table(clickData, store_data):
+        print("INSIDE UPDATE TABLE--", clickData)
+        print("STORE DATA", store_data)
         if clickData is None:
             return [], {'display': 'none'}, None
 
         # Extract the sentiment from the clicked data point
         sentiment = clickData['points'][0]['theta']
+        print("SENTIMENT", sentiment)
 
-        if store_data and store_data['points'][0]['theta'] == sentiment:
-            return [], {'display': 'none'}, None
+        if store_data and store_data['sentiment'] == sentiment:
+            style = {'display': 'none'} if store_data['visible'] else {'display': 'block'}
+            visible = not store_data['visible']
+        else:
+            style = {'display': 'block'}
+            visible = True
 
         # Query your data source to get the list of data corresponding to the clicked sentiment
         data = query_sentiment_data(sentiment).head(15)
         data = data.to_dict('records')
 
-        return data, {'display': 'block'}, clickData
+        # Initialize store_data if it's None
+        if store_data is None:
+            store_data = {}
+
+        # Update store data to force the callback to recognize a change
+        store_data = {'sentiment': sentiment, 'visible': visible,
+                      'force_update': not store_data.get('force_update', False)}
+
+        return data, style, store_data
 
     @app.callback(
         Output('tabs-content', 'children'),
@@ -323,13 +301,13 @@ def register_callbacks(app):
         return html.Iframe(srcDoc=open(f'political_topics_network_{tab}.html', 'r').read(), width='100%',
                            height='750px')
 
-    @app.callback(
-        Output('sentiment-piecharts', 'figure'),
-        [Input('state-checklist', 'value'),
-         Input('date-slider', 'value')]
-    )
-    def update_piecharts(selected_states, selected_year):
-        # Convert the selected year to start and end dates
-        start_date = f"{selected_year}-01-01"
-        end_date = f"{selected_year}-12-31"
-        return update_sentiment_piecharts(selected_states, start_date, end_date)
+    # @app.callback(
+    #     Output('sentiment-piecharts', 'figure'),
+    #     [Input('state-checklist', 'value'),
+    #      Input('date-slider', 'value')]
+    # )
+    # def update_piecharts(selected_states, selected_year):
+    #     # Convert the selected year to start and end dates
+    #     start_date = f"{selected_year}-01-01"
+    #     end_date = f"{selected_year}-12-31"
+    #     return update_sentiment_piecharts(selected_states, start_date, end_date)
