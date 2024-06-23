@@ -83,14 +83,12 @@ def register_callbacks(app):
         fig.update_layout(
             margin={"r": 10, "t": 10, "l": 10, "b": 10}
         )
-        # Default center
         center = [47.5162, 14.5501]
 
         if click_data:
             state = click_data['points'][0]['location']
             for feature in features:
                 if feature['properties']['name'] == state:
-                    # Check if the selected region is a multipolygon
                     if feature['geometry']['type'] == 'MultiPolygon':
                         co_ordinates = [c for c in feature['geometry']['coordinates'][0][0]]
                     else:
@@ -198,7 +196,6 @@ def register_callbacks(app):
     )
     def update_dropdown(selected_values):
         print("Selected Values", selected_values)
-        # make sure that the selected values are always a list
         if not isinstance(selected_values, list):
             selected_values = [selected_values]
         options = [{'label': option['label'], 'value': option['value']} for option in data_dropdown_Party()]
@@ -208,12 +205,10 @@ def register_callbacks(app):
         if len(selected_values) > 1:
             print("More than one selected")
             if 'All' in selected_values and selected_values[0] == 'All':
-                # if 'All' is at the beginning, remove 'All'
                 selected_values = selected_values[1:]
             elif 'All' in selected_values and selected_values[-1] == 'All':
                 selected_values = ['All']
             else:
-                # if 'All' is not at the beginning, remove all other options
                 selected_values = selected_values
         print("Selected Values", selected_values)
         return selected_values
@@ -228,7 +223,6 @@ def register_callbacks(app):
         # If a city is clicked, extract the clicked city
         city = click_data['points'][0]['location'] if click_data else None
 
-        # Load the word cloud data for the clicked city and the selected party
         wordcloud_data = load_wordcloud_data(city, filter1, selected_year)
         # print("WORDCLOUD DATA", wordcloud_data)
 

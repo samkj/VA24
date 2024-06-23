@@ -1,7 +1,7 @@
 import pandas as pd
 from pyvis.network import Network
 
-# Load the classified CSV data
+# Load 
 file_path = r'subreddits_datafiles/processed_datafiles_sentiment/classified_sentiment_all_subreddits_data.csv'
 df = pd.read_csv(file_path)
 
@@ -40,8 +40,7 @@ topic_x = -200
 topic_y = 0
 for topic, color in topics.items():
     net.add_node(topic, label=topic, color=color, title=f"Topic: {topic}", x=topic_x, y=topic_y, fixed=True)
-    topic_x += 100  # Increase the margin between nodes
-
+    topic_x += 100  
 # Add nodes for each party with increased margin
 party_x = -200
 party_y = -200
@@ -57,5 +56,5 @@ for topic in topics.keys():
         if count > 0:
             net.add_edge(topic, party, value=count, title=f"Topic: {topic}, Party: {party}, Co-occurrence: {count}", color=party_colors[party])
 
-# Save and show the graph
+
 net.show('topics_parties_network.html')
