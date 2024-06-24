@@ -129,10 +129,9 @@ def register_callbacks(app):
         print("INSIDE UPDATE SENTIMENT GRAPH--", selected_year)
         # if a state is selected, filter the data based on the selected state
         state = click_data['points'][0]['location'] if click_data else None
+        print("State", state)
         sentiment_data = load_sentiment_data(state, filter1, selected_year)
-        min_year, max_year = pd.to_datetime(sentiment_data['post_date']).dt.year.min(), pd.to_datetime(sentiment_data['post_date']).dt.year.max()
-        print("Min Year", min_year, "Max Year", max_year)
-        print("Sentiment Data", sentiment_data.shape)
+        # print("Sentiment Data", sentiment_data.shape)
         if sentiment_data.empty:
             # Create an empty figure with a message
             fig = go.Figure(layout=go.Layout(
@@ -152,6 +151,7 @@ def register_callbacks(app):
         negative = sentiment_data[sentiment_data['BERT_class'] == 'NEGATIVE'].shape[0] / sentiment_data.shape[0] * 100
         neutral = sentiment_data[sentiment_data['BERT_class'] == 'NEUTRAL'].shape[0] / sentiment_data.shape[0] * 100
 
+        # print("Positive", positive, "Negative", negative, "Neutral", neutral)
         fig = go.Figure(
             go.Barpolar(
                 r=[positive, negative, neutral],
@@ -224,7 +224,7 @@ def register_callbacks(app):
         city = click_data['points'][0]['location'] if click_data else None
 
         wordcloud_data = load_wordcloud_data(city, filter1, selected_year)
-        # print("WORDCLOUD DATA", wordcloud_data)
+        # print("WORDCLOUD DATA shape", wordcloud_data)
 
         # Check if the wordcloud_data is empty
         if not wordcloud_data:
@@ -257,9 +257,9 @@ def register_callbacks(app):
         [State('store', 'data')]
     )
     def update_table(clickData, filter, store_data):
-        print("INSIDE UPDATE TABLE--", filter)
-        print("INSIDE UPDATE TABLE--", clickData)
-        print("STORE DATA", store_data)
+        # print("INSIDE UPDATE TABLE--", filter)
+        # print("INSIDE UPDATE TABLE--", clickData)
+        # print("STORE DATA", store_data)
         if clickData is None:
             # Return an empty figure if clickData is None
             fig = go.Figure(
@@ -338,14 +338,3 @@ def register_callbacks(app):
     def render_content(tab):
         return html.Iframe(srcDoc=open(f'political_topics_network_{tab}.html', 'r').read(), width='100%',
                            height='750px')
-
-    # @app.callback(
-    #     Output('sentiment-piecharts', 'figure'),
-    #     [Input('state-checklist', 'value'),
-    #      Input('date-slider', 'value')]
-    # )
-    # def update_piecharts(selected_states, selected_year):
-    #     # Convert the selected year to start and end dates
-    #     start_date = f"{selected_year}-01-01"
-    #     end_date = f"{selected_year}-12-31"
-    #     return update_sentiment_piecharts(selected_states, start_date, end_date)
