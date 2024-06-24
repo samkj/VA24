@@ -24,15 +24,12 @@ def load_data(file_path: str) -> pd.DataFrame:
 
 
 def get_posts_by_state(state, start_date=None, end_date=None):
-    # file_path = f'subreddits_datafiles/processed_datafiles_sentiment/sentiment_all_subreddits_data.csv'
     file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     try:
         df = pd.read_csv(file_path)
     except FileNotFoundError:
-        return pd.DataFrame()  
+        return pd.DataFrame()
 
-    #if start_date and end_date:
-        #df = df[(df['post_date'] >= start_date) & (df['post_date'] <= end_date)]
     return df[df['state'] == state]
     
     # return df
@@ -54,24 +51,13 @@ def load_sentiment_data(state: str, filter, selected_year) -> pd.DataFrame:
     """
     This function loads the sentiment data for a given state from a .csv file and returns it as a pandas DataFrame.
     """
-    # print("Selected Year", selected_year)
-    # print("State", state)
-    # print("Filter", filter)
     file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
-    # print("SENTIMENT File Path", file_path)
 
     # Load the CSV file into a pandas DataFrame
     df = pd.read_csv(file_path)
 
-    # Convert the 'post_date' column to datetime
-    df['post_date'] = pd.to_datetime(df['post_date'])
-
-    # Filter the data based on the selected year
-    df = df[df['post_date'].dt.year <= selected_year]
-    # print(df.columns)
-
     if state:
-        print("State is not None")
+        print("State is not None-", state)
         if state == 'Niederoesterreich':
             state = 'Niederösterreich'
         elif state == 'Oberoesterreich':
@@ -82,19 +68,22 @@ def load_sentiment_data(state: str, filter, selected_year) -> pd.DataFrame:
         # print("State is None")
         df = df
 
+    df['post_date'] = pd.to_datetime(df['post_date'])
+
+    # Filter the data based on the selected year
+    df = df[df['post_date'].dt.year <= selected_year]
+
+    if not isinstance(filter, list):
+        filter = [filter]
+
     # Parties can be multiple, so we need to filter the data based on the selected parties
     if filter != ['All']:
-        print("Not All Party in sentiment data")
         # filter also for the synonyms of the parties
         filter = [party for party in party_synonyms if party in filter]
         df = df[df['comment_keyword'].isin(filter)]
-        # print("HAHAHHAHHAH")
-        # print(df.head(5))  # Print the DataFrame for debugging
     else:
-        print("All Party in sentiment data")
         df = df
 
-    # print("HAHAHHAHHAH")
     return df
 
 
@@ -102,41 +91,39 @@ def load_wordcloud_data(city: str, party, selected_year) -> dict:
     """
     This function loads the word cloud data for a given city and party from a .csv file and returns it as a pandas DataFrame.
     """
-    print("load_wordcloud_data Year", selected_year)
-    print("load_wordcloud_data Party", party)
-    print("load_wordcloud_data City", city)
     file_path = f'subreddits_datafiles/all data_sentiment/austria_politik_all_posts_sentiment.csv'
     df = pd.read_csv(file_path)
     # Convert the 'post_date' column to datetime
-    df['post_date'] = pd.to_datetime(df['post_date'])
-
-    # Filter the data based on the selected year
-    df = df[df['post_date'].dt.year <= selected_year]
 
     if city:
-        print("City is not None")
+        # print("City is not None--", city)
         # if Niederoesterreich -> Niederösterreich and same for Oberoesterreich
         if city == 'Niederoesterreich':
             city = 'Niederösterreich'
         elif city == 'Oberoesterreich':
             city = 'Oberösterreich'
         df = get_posts_by_state(city)
-        print(df.head(5))
+        # print(df.head(5))
     else:
-        print("City is None")
+        # print("City is None")
         df = df
+
+    df['post_date'] = pd.to_datetime(df['post_date'])
+
+    # Filter the data based on the selected year
+    df = df[df['post_date'].dt.year <= selected_year]
 
     # make sure that party is a list
     if not isinstance(party, list):
         party = [party]
     # parties can be multiple, so we need to filter the data based on the selected parties
     if party != ['All']:
-        print("Not All Party")
+        # print("Not All Party")
         filter = [parties for parties in party_synonyms if parties in party]
         df = df[df['comment_keyword'].isin(filter)]
-        print(df.shape)
+        # print(df.shape)
     else:
-        print("All Party")
+        # print("All Party")
         df = df
 
     # combine the title and body columns
@@ -154,6 +141,7 @@ def load_wordcloud_data(city: str, party, selected_year) -> dict:
     # Lemmatization
     lemmatizer = WordNetLemmatizer()
     df['text'] = df['text'].apply(lambda x: ' '.join(lemmatizer.lemmatize(word) for word in word_tokenize(x)))
+    # print("WORD CLOUD SHAPE", df.shape)
 
     word_freq = Counter(' '.join(df['text']).split())
     return dict(word_freq)
@@ -180,6 +168,6 @@ def query_sentiment_data(sentiment: str, filter) -> pd.DataFrame:
     else:
         df = df
 
-    print("INSIDE query_sentiment_data--", df.describe())
+    # print("INSIDE query_sentiment_data--", df.describe())
 
     return df[['author_name', 'title', 'comment_body']]
