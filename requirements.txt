@@ -57,7 +57,7 @@ filelock==3.14.0
     # via
     #   huggingface-hub
     #   transformers
-fiona==1.9.6
+fiona>=1.10b2
     # via geopandas
 flask==3.0.3
     # via dash
